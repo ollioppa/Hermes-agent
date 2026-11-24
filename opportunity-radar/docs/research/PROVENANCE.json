@@ -1,0 +1,135 @@
+[
+  {
+    "source": "research/stockpicking-research-review/SKILL.md",
+    "target": "docs/research/stockpicking/SKILL.md",
+    "source_sha256": "7cebe68c4690b7b396ff0c18b6c7e20a7e86838bf41b04b13a4944f797909af5",
+    "export_sha256": "c78598942be5160739985f5d33355c0e9e71034665e1f727b5baa0427b5eda10",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/intake-and-screening.md",
+    "target": "docs/research/stockpicking/references/intake-and-screening.md",
+    "source_sha256": "54926390a92fa7e1f15b12e08f3dc2a39732e2bd15382b2773397f5558cdc030",
+    "export_sha256": "30e57af2c73d92c0229069e3b652e8fbcdc0d478b221e512f12bd40ce91fb25a",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/economic-investigation.md",
+    "target": "docs/research/stockpicking/references/economic-investigation.md",
+    "source_sha256": "48bfa0379a91b4f93638e94d323b43fdafdc09779486e76be1008ecfd123b13a",
+    "export_sha256": "115d58f03ff2815bca35187fbb2a6f203c18e0a34d072bfb4693e35985245dbe",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/situational-review.md",
+    "target": "docs/research/stockpicking/references/situational-review.md",
+    "source_sha256": "ab64a3370ed90565d7183c48fd9a8c02531bfe1babbe1257cad7860a6a39f5fc",
+    "export_sha256": "b86d41b08721f660cf2e67298789f031e6c3be7417512154710aef0abf7ee758",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/radar-and-recurring-operations.md",
+    "target": "docs/research/stockpicking/references/radar-and-recurring-operations.md",
+    "source_sha256": "bd9fb3ac26d7ee98ecc774c4f1d4007c495d2ec5a8bd1fda785a661f37d568dd",
+    "export_sha256": "7da9522ab354efae54d5388e482de5b85fb9b1d40cf5c18c2bbaa2e5caa93e8f",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/owned-position-review.md",
+    "target": "docs/research/stockpicking/references/owned-position-review.md",
+    "source_sha256": "b6ee24d0786903591c72a7419ecc48cde5ebff180818855b55414262c4a1497c",
+    "export_sha256": "a30487e2f6c56c6d4a9082479079bd878977298214de488f0d127967899b68ce",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/method-validation.md",
+    "target": "docs/research/stockpicking/references/method-validation.md",
+    "source_sha256": "aff8ac7261c859c306e6a2137ecdf8d7ec18f3180c3e5c31f5d04cd38e213c22",
+    "export_sha256": "efd73a9ad80eaffa7b3427f173bd83e4e257f6c0ebaae867b67c87d99f29f264",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/automotive-transition-analysis.md",
+    "target": "docs/research/stockpicking/references/automotive-transition-analysis.md",
+    "source_sha256": "069607d16e042022936cf3480ec6ab3f499404171a095f66f013f09e750ddb66",
+    "export_sha256": "3edc9740569a56e0ba570133f197351d7cc196b7af04a27b8ecd1dfc3caff5e7",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/industrial-conglomerate-valuation.md",
+    "target": "docs/research/stockpicking/references/industrial-conglomerate-valuation.md",
+    "source_sha256": "16cbfcb944972487062c60af462955ae7a04413c01735e7f1df3e95984a728da",
+    "export_sha256": "97c302d51db88b0470086d64c5be36bf6410dfc62ebc09a00d77334515ecc863",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/stockpicking-research-review/references/incremental-lens-testing.md",
+    "target": "docs/research/stockpicking/references/incremental-lens-testing.md",
+    "source_sha256": "7faba07dc7e16cbe22d85c81acdfc6807412bcac7fa11625cbcbc9156e528aa9",
+    "export_sha256": "65efdd112fb69c27e642abda9f4a2c610ac3e6e2cc26cb20505e930b9d978fe6",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "productivity/editorial-briefing/SKILL.md",
+    "target": "docs/research/editorial/SKILL.md",
+    "source_sha256": "0ed2ec2497de39d1818f5afb4980ebc15bb972e933a9b86f5824e24398986793",
+    "export_sha256": "3e0ea926d85726593f662ef39b303b090989eb205308c069e9627ae692288c29",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "productivity/editorial-briefing/references/financial-briefing-analysis-and-scoring.md",
+    "target": "docs/research/editorial/references/financial-briefing-analysis-and-scoring.md",
+    "source_sha256": "4b25efbea375508d49ed0e37b4943786fb7f806f3248510e02a89c0b44eb07af",
+    "export_sha256": "cf7557d9f3d4b591db5431df49ff6d5774e5eecdfe622321e927b9dcf50b8184",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/grounded-citations/SKILL.md",
+    "target": "docs/research/citations/SKILL.md",
+    "source_sha256": "694376f925895d7b7db3af3751560cc6944726bbd2ec56c29852127be19d9864",
+    "export_sha256": "42f3031990b9af8cf11a3034fb53d02dd242160d1d917cae532a8ca0c17cf071",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/grounded-citations/references/citation-formats.md",
+    "target": "docs/research/citations/references/citation-formats.md",
+    "source_sha256": "209312a46dd9516e44e78f617589f789e07d54660e347b6b3882e8ac60097d04",
+    "export_sha256": "61dd2a27222f50719caa345f2ed8ce47f1ccc9f929b8df564c8d6fe565d607ea",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/grounded-citations/scripts/sources.py",
+    "target": "docs/research/citations/scripts/sources.py",
+    "source_sha256": "0c216e29e092faedcaa1ebae129db15dfc100465169490704b3628446db96788",
+    "export_sha256": "072579037aadda9a7552414ae2edf84165eb3c9e674b91901dbb8ba054e017a2",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/economic-mechanism-audit/SKILL.md",
+    "target": "docs/research/mechanisms/SKILL.md",
+    "source_sha256": "6cf18a2f8f60680f5adcf41d6b391715740bbadb4ad5718d23d155416f597226",
+    "export_sha256": "424ec85f8a89d1a7571c6f10c04e6afb52ce7ce8155abee228a0d83242bb30cb",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/economic-mechanism-audit/references/rent-fragmentation-and-transmission.md",
+    "target": "docs/research/mechanisms/references/rent-fragmentation-and-transmission.md",
+    "source_sha256": "b0e8d43662c45be5a28edae3d9f4870fda26e6929e891618d8ce9a3f0b46c42f",
+    "export_sha256": "08633643b49c200d62a067d4105f3182245604da677f73c3551e3e87b9a39719",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "research/supercycle-thesis/SKILL.md",
+    "target": "docs/research/supercycle/SKILL.md",
+    "source_sha256": "5f02ffdce63c2fdae072458ce413eacda104ecd54ec549476462669f8e70d6e3",
+    "export_sha256": "f471c16d56ff8c9a68f11c95f8c9ad0a64e5b308e6b911d9091c1a758eda2856",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  },
+  {
+    "source": "productivity/documentation-guide/SKILL.md",
+    "target": "docs/research/writing/SKILL.md",
+    "source_sha256": "877082d3637c4d18e0d6c3e95403b7cbbb365c8a73bbdec3af7890a49ae907fc",
+    "export_sha256": "06e449e15a72c4c2ed2706aaa314fa62b6b94419c151809c436276515790680b",
+    "changes": "portable path/actor binding; private integration/personal evidence removed; substantive procedural text preserved"
+  }
+]

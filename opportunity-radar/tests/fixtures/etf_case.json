@@ -1,0 +1,63 @@
+{
+  "symbol": "URA",
+  "name": "Schema fixture URA",
+  "kind": "etf",
+  "sector_symbol": "XLE",
+  "review": {
+    "evidence_as_of": "2026-08-20",
+    "motor": "Explicit generated schema fixture; no investment research",
+    "environment": "Explicit generated schema fixture; no investment research",
+    "relative_strength": "Explicit generated schema fixture; no investment research",
+    "expectation": "Explicit generated schema fixture; no investment research",
+    "asymmetry": "Explicit generated schema fixture; no investment research",
+    "counterpath": "Explicit generated schema fixture; no investment research",
+    "falsifier": "Explicit generated schema fixture; no investment research",
+    "missing_to_ready": "Explicit generated schema fixture; no investment research",
+    "index_methodology": "Explicit generated schema fixture; no investment research",
+    "holdings_transmission": "Explicit generated schema fixture; no investment research",
+    "concentration": "Explicit generated schema fixture; no investment research",
+    "costs_liquidity": "Explicit generated schema fixture; no investment research",
+    "rebalancing": "Explicit generated schema fixture; no investment research",
+    "overlap": "Explicit generated schema fixture; no investment research"
+  },
+  "sources": [
+    "https://example.invalid/schema-fixture"
+  ],
+  "snapshots": {
+    "case": {
+      "symbol": "URA",
+      "role": "case",
+      "price": 47.5,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T05:00:00Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    },
+    "spy": {
+      "symbol": "SPY",
+      "role": "benchmark",
+      "price": 765.96,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T05:00:00Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    },
+    "sector": {
+      "symbol": "XLE",
+      "role": "sector",
+      "price": 64.77,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T07:00:17Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    }
+  },
+  "immediate_investable": false,
+  "watch_condition": {
+    "kind": "price",
+    "description": "Explicit fixture condition: one documented event confirmation"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://btw-api.local/contracts/bdc_scores.schema.json",
+  "title": "BDC structured score export",
+  "type": "object",
+  "required": [
+    "as_of",
+    "scores",
+    "regime_probabilities",
+    "status_label"
+  ],
+  "properties": {
+    "as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "stage1_kreditqualitaet",
+        "stage2_wrapper_repricing",
+        "stage3_funding_stress",
+        "stage4_kreditangebot",
+        "stage5_makro_folgen",
+        "stage6_rueckkopplung"
+      ],
+      "additionalProperties": true
+    },
+    "regime_probabilities": {
+      "type": "object",
+      "required": [
+        "A_sektorales_repricing",
+        "B_slow_burn_japanisierung",
+        "C_gekoppelte_eskalation"
+      ],
+      "additionalProperties": true
+    },
+    "status_label": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "schema_version": 1
+}

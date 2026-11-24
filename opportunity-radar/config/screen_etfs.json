@@ -1,0 +1,16 @@
+[
+  {"stable_identity":"ARCX:SPY","symbol":"SPY","name":"SPDR S&P 500 ETF Trust","region":"US","mic":"ARCX","currency":"USD","price_symbol":"SPY"},
+  {"stable_identity":"XNAS:QQQ","symbol":"QQQ","name":"Invesco QQQ Trust","region":"US","mic":"XNAS","currency":"USD","price_symbol":"QQQ"},
+  {"stable_identity":"ARCX:IWM","symbol":"IWM","name":"iShares Russell 2000 ETF","region":"US","mic":"ARCX","currency":"USD","price_symbol":"IWM"},
+  {"stable_identity":"ARCX:URA","symbol":"URA","name":"Global X Uranium ETF","region":"US","mic":"ARCX","currency":"USD","price_symbol":"URA"},
+  {"stable_identity":"XNAS:SMH","symbol":"SMH","name":"VanEck Semiconductor ETF","region":"US","mic":"XNAS","currency":"USD","price_symbol":"SMH"},
+  {"stable_identity":"ARCX:XBI","symbol":"XBI","name":"SPDR S&P Biotech ETF","region":"US","mic":"ARCX","currency":"USD","price_symbol":"XBI"},
+  {"stable_identity":"XETR:EXSA","symbol":"EXSA","name":"iShares STOXX Europe 600 UCITS ETF DE","region":"EU","mic":"XETR","currency":"EUR","price_symbol":"EXSA.DEX"},
+  {"stable_identity":"XETR:SXR8","symbol":"SXR8","name":"iShares Core S&P 500 UCITS ETF","region":"EU","mic":"XETR","currency":"EUR","price_symbol":"SXR8.DEX"},
+  {"stable_identity":"XLON:CSPX","symbol":"CSPX","name":"iShares Core S&P 500 UCITS ETF","region":"EU","mic":"XLON","currency":"USD","price_symbol":"CSPX.LON"},
+  {"stable_identity":"XLON:EQQQ","symbol":"EQQQ","name":"Invesco EQQQ Nasdaq-100 UCITS ETF","region":"EU","mic":"XLON","currency":"GBP","price_symbol":"EQQQ.LON"},
+  {"stable_identity":"XLON:INRG","symbol":"INRG","name":"iShares Global Clean Energy UCITS ETF","region":"EU","mic":"XLON","currency":"GBP","price_symbol":"INRG.LON"},
+  {"stable_identity":"XLON:IWDA","symbol":"IWDA","name":"iShares Core MSCI World UCITS ETF","region":"EU","mic":"XLON","currency":"USD","price_symbol":"IWDA.LON"},
+  {"stable_identity":"XETR:EXV1","symbol":"EXV1","name":"iShares STOXX Europe 600 Banks UCITS ETF DE","region":"EU","mic":"XETR","currency":"EUR","price_symbol":"EXV1.DEX"},
+  {"stable_identity":"XSWX:CHSPI","symbol":"CHSPI","name":"iShares Core SPI ETF CH","region":"EU","mic":"XSWX","currency":"CHF","price_symbol":"CHSPI.SWX"}
+]

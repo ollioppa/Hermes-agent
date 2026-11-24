@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opportunity-radar"
+version = "0.1.0"
+description = "Local stock and ETF opportunity radar"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.4,<2",
+    "huggingface-hub>=1.4,<2",
+    "yfinance>=1.0,<2",
+]
+
+[project.scripts]
+opportunity-radar = "opportunity_radar.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

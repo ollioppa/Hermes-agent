@@ -1,0 +1,46 @@
+{
+  "cb_premium": {
+    "id": "cb_premium",
+    "version": "v1",
+    "provider": "coinbase_binance",
+    "source_field": "cb_premium_pct",
+    "unit": "percent",
+    "transform_reference_window": "180 preceding contiguous calendar days; inclusive percentile bands <=20/40/60/80",
+    "availability_prerequisites": ["coinbase=ok", "binance=ok", "valid spot closes", "180d complete window"],
+    "provenance_prerequisites": ["no cross-source fallback"],
+    "point_rule": {"kind": "percentile_180d", "points": {"<=20": 2, "<=40": 1, "<=60": 0, "<=80": -1, ">80": -2}}
+  },
+  "oi": {
+    "id": "oi",
+    "version": "v1",
+    "provider": "coinalyze",
+    "source_field": "perp_oi_usd",
+    "unit": "usd",
+    "transform_reference_window": "180 preceding contiguous calendar days; inclusive percentile bands <=20/40/60/80",
+    "availability_prerequisites": ["oi=ok", "180d complete window"],
+    "provenance_prerequisites": ["fixed v1 nine-symbol basket", "daily close c", "convert_to_usd=true", "coverage_pct=100"],
+    "point_rule": {"kind": "percentile_180d", "points": {"<=20": 2, "<=40": 1, "<=60": 0, "<=80": -1, ">80": -2}}
+  },
+  "mvrv": {
+    "id": "mvrv",
+    "version": "v1",
+    "provider": "coinmetrics",
+    "source_field": "mvrv",
+    "unit": "ratio",
+    "transform_reference_window": "daily raw value; no fallback",
+    "availability_prerequisites": ["mvrv=ok", "raw daily value"],
+    "provenance_prerequisites": ["CoinMetrics identity"],
+    "point_rule": {"kind": "thresholds", "points": {"<1.3": 2, "<1.5": 1, "<=2.5": 0, ">2.5": -2}}
+  },
+  "fear_greed": {
+    "id": "fear_greed",
+    "version": "v1",
+    "provider": "alternative_me",
+    "source_field": "fear_greed",
+    "unit": "index_0_100",
+    "transform_reference_window": "daily raw value; no fallback",
+    "availability_prerequisites": ["fear_greed=ok", "raw daily value"],
+    "provenance_prerequisites": ["Alternative.me identity"],
+    "point_rule": {"kind": "thresholds", "points": {"<15": 2, "<25": 1, "<=75": 0, ">75": -2}}
+  }
+}

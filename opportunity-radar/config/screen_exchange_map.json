@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "source": "iShares EXSA holdings producer exchange strings observed 2026-09-09",
+  "alpha_vantage_rule": "price_symbol is source ticker normalized only by an explicitly VERIFIED suffix rule; PENDING_LIVE_KEY blocks acquisition",
+  "producer_exchange_map": {
+    "Bolsa De Madrid": {"mic": "XMAD", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Borsa Italiana": {"mic": "XMIL", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Athens Exchange S.A. Cash Market": {"mic": "XATH", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Deutsche Boerse Xetra": {"mic": "XETR", "alpha_suffix": ".DEX", "alpha_status": "DOC_VERIFIED_PENDING_WEEKLY_KEY_PROOF"},
+    "Euronext Amsterdam": {"mic": "XAMS", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Irish Stock Exchange - All Market": {"mic": "XDUB", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "London Stock Exchange": {"mic": "XLON", "alpha_suffix": ".LON", "alpha_status": "WEEKLY_DEMO_VERIFIED"},
+    "Nasdaq Omx Helsinki Ltd.": {"mic": "XHEL", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Nasdaq Omx Nordic": {"mic": "XSTO", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Nyse Euronext - Euronext Brussels": {"mic": "XBRU", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Nyse Euronext - Euronext Lisbon": {"mic": "XLIS", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Nyse Euronext - Euronext Paris": {"mic": "XPAR", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Omx Nordic Exchange Copenhagen A/S": {"mic": "XCSE", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Oslo Bors Asa": {"mic": "XOSL", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "SIX Swiss Exchange": {"mic": "XSWX", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Warsaw Stock Exchange/Equities/Main Market": {"mic": "XWAR", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Wiener Boerse Ag": {"mic": "XWBO", "alpha_suffix": null, "alpha_status": "PENDING_LIVE_KEY"},
+    "Xetra": {"mic": "XETR", "alpha_suffix": ".DEX", "alpha_status": "DOC_VERIFIED_PENDING_WEEKLY_KEY_PROOF"}
+  }
+}

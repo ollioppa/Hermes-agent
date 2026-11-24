@@ -1,0 +1,36 @@
+# Hermes-agent
+
+Three practical projects by Roland Chotika, developed with AI assistance and published together as sanitized, independently usable exports. This is a project collection, **not the Hermes Agent framework and not an official Nous Research distribution**.
+
+## Choose a project
+
+- **[btw-api](btw-api/README.md)** — Python market-data collection, calculations, Google Sheets persistence and structured snapshots. Includes a credential-free synthetic example using the real calculation and snapshot code.
+- **[Opportunity Radar](opportunity-radar/README.md)** — equity/ETF research workflow with deterministic Python state management, canonical research prompts and supporting methods. Start with its [agent instructions](opportunity-radar/AGENTS.md) when using an AI harness.
+- **[Documentation Guide](documentation-guide/README.md)** — a reusable documentation method with a neutral worked example. Open `documentation-guide/START-HERE.html` locally for its HTML entry point.
+
+## Get started
+
+```sh
+git clone https://github.com/ollioppa/Hermes-agent.git
+cd Hermes-agent
+```
+
+Choose one project and follow its README **from that project's directory**. There is no shared Python environment or global installer. Do not run live-provider or write commands before configuring your own accounts and understanding their effects.
+
+Radar needs an intelligent agent/harness with suitable research and execution tools. Hermes, Claude Code, Codex or OpenClaw can be used as integration environments; compatibility with every harness is not claimed or independently tested. No private installation, scheduler or account is included. The agent should read the project instructions, identify its available tools and configure the workflow rather than invent missing evidence or bypass human decisions.
+
+## What was verified
+
+- **btw-api:** clean Python 3.14.5 installation on macOS; 255 tests passed; real offline consumer ran twice with identical output; import and network/write isolation checked.
+- **Opportunity Radar:** clean Python 3.13 installation; 132 tests passed, including another run at the final export location; offline smoke/demo exercised real persistence and reader paths. Canonical prompts and selected research references are included.
+- **Documentation Guide:** method preservation reviewed; example commands executed; local links and packaged entry files checked.
+
+These are scoped checks, not a guarantee of investment performance, live-provider availability, mail delivery, or a newly executed end-to-end LLM research run. Synthetic examples are not market observations. Historical macro inputs intentionally omitted from btw-api must be supplied lawfully for its optional full macro workflow. See each project's limitations.
+
+## Export boundary
+
+This repository starts with new Git history. Private operational repositories, their histories, personal databases, credentials, account configuration and internal review logs are not included. Component references to a local review candidate or pending publication describe the preparation stage; publication of these exports was subsequently authorized together. They do not imply that private originals or live automations have been published.
+
+## License
+
+Each project includes an **MIT LICENSE**. Third-party notices, dependency licenses and market-data rights remain separate; see the component provenance/rights documents. Code licensing does not grant redistribution rights to provider data.

@@ -1,0 +1,15 @@
+# Bedingte Eingaben und ausdrücklich nicht exportierte Inhalte
+
+Die fachlichen Verfahren liegen lokal vor. Folgende Eingaben sind keine mitzuliefernde Skillbibliothek und dürfen nicht aus privaten Originalprojekten nachgeladen werden. Der Betreiber liefert sie für den konkreten Auftrag ausdrücklich und rechtmäßig, lokal mit Herkunft, Stand und Quellenbindung. Fehlen sie, nur den betroffenen Teilauftrag als offen ausweisen; keine Ersatzthese, erfundene Bestände oder zusätzliche Investmentpolicy bauen.
+
+| Trigger | Erforderliche Eingabe | Grenze bei Fehlen |
+|---|---|---|
+| Ausdrücklicher Vergleich gegen eine konkrete Betreiberthese oder einen vorhandenen Betreiber-Kreditradar | Bereitgestellter kanonischer Regimezustand, Thesenregister und relevante Emittentenereignisse einschließlich Quellen/Zeiten | Nur der betreiberspezifische Vergleich bleibt ohne diese Eingaben offen. Normales Unternehmens-/ETF-Research, auch zu BDCs, Private Credit, Versicherern, alternativen Managern und CLOs, nutzt autorisierte öffentliche Branchen-/Kreditquellen und weist Beleglücken aus. Branchenzugehörigkeit allein verlangt keinen privaten Radar. Keine private BDC-Datenbank enthalten. |
+| Supercycle-Fit | Vom Betreiber bestätigte strukturelle These und quellengeprüftes Langmemo | Kein Urteil über Fit zur unbekannten These; nur bereits belegte Mechanismen untersuchen. Routing und Entscheidungsdisziplin: `docs/research/supercycle/SKILL.md`. |
+| Portfoliofit, Positionen, persönliche Ausschlüsse | Eigene ausdrücklich bereitgestellte Positionen/Baselines, relevante sonstige Exposures und Präferenzen | Keine Allokationsprozente oder persönlichen Ausschlüsse erfinden; Bestand und Empfehlung getrennt halten. |
+| Methodenänderung oder Behauptung empirisch besserer Selektion | Eingefrorene Fallpakete, Cutoffs, frühere Urteile, Quellen/Code/Outputmanifest und unabhängige Prüfung | Historische private Benchmarks und Reviewprotokolle nicht exportiert; keine empirische Verbesserung behaupten. Vergleichbarkeitsregeln und vollständiges Blindprotokoll sind lokal enthalten. |
+| Änderung einer bereits datierten Prognose | Ursprünglicher Call, Datum, Annahmen, Falsifikator und nachvollziehbarer Änderungsgrund | Nie zurückdatieren oder unbekannte Prognosehistorie rekonstruieren. Kein fremdes Forecastprojekt erforderlich. |
+
+Der private ausgearbeitete Lebensmittelhändler-Fall wurde vollständig ausgeschlossen: Er enthält konkrete persönliche Aufnahme-, Preis-, Größen- und Exitentscheidungen. Er ist kein allgemeiner positiver Kontrollfall und keine erforderliche Vorlage. Die allgemeinen Branchen-, Management-, Kundenökonomie- und Bewertungsverfahren bleiben enthalten.
+
+Nicht im Paket: private Dokumentationsentstehung/Feedbackprotokolle, persönliche Finanzmemos, andere Radare, Council-Laufarchive, Brokerdaten, Konten, Jobs, Secrets oder private Freeze-/Git-Historie. Diese Ausschlüsse sind keine fehlenden Ersatzrunner. Ein gewöhnlicher Researchauftrag ohne diese Trigger nutzt die vollständigen lokalen Verfahren und den unveränderten kanonischen Deep Dive.

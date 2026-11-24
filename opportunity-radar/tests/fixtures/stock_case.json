@@ -1,0 +1,73 @@
+{
+  "symbol": "UNH",
+  "name": "Schema fixture UNH",
+  "kind": "stock",
+  "sector_symbol": "XLV",
+  "review": {
+    "evidence_as_of": "2026-07-16",
+    "motor": "Explicit generated schema fixture; no investment research",
+    "environment": "Explicit generated schema fixture; no investment research",
+    "relative_strength": "Explicit generated schema fixture; no investment research",
+    "expectation": "Explicit generated schema fixture; no investment research",
+    "asymmetry": "Explicit generated schema fixture; no investment research",
+    "counterpath": "Explicit generated schema fixture; no investment research",
+    "falsifier": "Explicit generated schema fixture; no investment research",
+    "missing_to_ready": "Explicit generated schema fixture; no investment research",
+    "moat_competition": "Explicit generated schema fixture; no investment research",
+    "cash_conversion": "Explicit generated schema fixture; no investment research",
+    "balance_financing": "Explicit generated schema fixture; no investment research",
+    "capital_allocation": "Explicit generated schema fixture; no investment research",
+    "valuation": "Explicit generated schema fixture; no investment research",
+    "margins": "Explicit generated schema fixture; no investment research",
+    "dilution": "Explicit generated schema fixture; no investment research",
+    "customer_economics": {
+      "historical_path": "Explicit generated schema fixture; no investment research",
+      "growth_composition": "Explicit generated schema fixture; no investment research",
+      "customer_value": "Explicit generated schema fixture; no investment research",
+      "support_intensity": "Explicit generated schema fixture; no investment research",
+      "margin_source_and_use": "Explicit generated schema fixture; no investment research",
+      "rent_quality": "Explicit generated schema fixture; no investment research",
+      "normalization_test": "Explicit generated schema fixture; no investment research"
+    }
+  },
+  "sources": [
+    "https://example.invalid/schema-fixture"
+  ],
+  "snapshots": {
+    "case": {
+      "symbol": "UNH",
+      "role": "case",
+      "price": 400.84,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T05:00:00Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    },
+    "spy": {
+      "symbol": "SPY",
+      "role": "benchmark",
+      "price": 765.96,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T05:00:00Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    },
+    "sector": {
+      "symbol": "XLV",
+      "role": "sector",
+      "price": 167.13,
+      "price_date": "2026-09-08",
+      "retrieved_at": "2026-09-09T05:00:00Z",
+      "currency": "USD",
+      "provider": "nasdaq_info",
+      "semantics": "last sale price; price return only; not total return"
+    }
+  },
+  "immediate_investable": false,
+  "watch_condition": {
+    "kind": "event",
+    "description": "Explicit fixture condition: one documented event confirmation"
+  }
+}
