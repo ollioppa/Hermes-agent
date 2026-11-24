@@ -14,7 +14,7 @@ from datetime import date, timedelta, datetime, timezone
 
 from src.config.settings import BINANCE_CHUNK_DAYS
 
-logger = logging.getLogger("btw_api.binance")
+logger = logging.getLogger("market_data_collector.binance")
 
 BASE_URL = "https://api.binance.com"
 TIMEOUT = 15

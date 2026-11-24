@@ -10,7 +10,7 @@ from datetime import date, timedelta
 from src.config.settings import WINDOWED_SHEETS_ENABLED, WINDOWED_SHEET_CONFIG
 from src.services.google_sheets import get_sheet_by_id, batch_write
 
-logger = logging.getLogger("btw_api.windowed_sheets")
+logger = logging.getLogger("market_data_collector.windowed_sheets")
 
 
 def _filter_rows_by_window(

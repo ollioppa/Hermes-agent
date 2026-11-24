@@ -62,7 +62,7 @@ def _load_export(path: Path, export_date: str) -> dict[str, Any]:
 
 
 def load_bdc_exports(inbox: Path = DEFAULT_BDC_INBOX) -> list[dict[str, Any]]:
-    """Read validated dated exports from the btw_api-owned inbox only."""
+    """Read validated dated exports from the market_data_collector-owned inbox only."""
     inbox = Path(inbox)
     if not inbox.exists():
         return []

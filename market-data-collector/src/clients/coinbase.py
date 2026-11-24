@@ -17,7 +17,7 @@ from datetime import date, timedelta, datetime, timezone
 
 from src.config.settings import COINBASE_CHUNK_DAYS
 
-logger = logging.getLogger("btw_api.coinbase")
+logger = logging.getLogger("market_data_collector.coinbase")
 
 BASE_URL = "https://api.exchange.coinbase.com"
 TIMEOUT = 15

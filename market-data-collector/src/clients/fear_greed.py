@@ -12,7 +12,7 @@ from datetime import datetime
 
 import requests
 
-logger = logging.getLogger("btw_api.fear_greed")
+logger = logging.getLogger("market_data_collector.fear_greed")
 
 BASE_URL = "https://api.alternative.me/fng/"
 TIMEOUT = 15

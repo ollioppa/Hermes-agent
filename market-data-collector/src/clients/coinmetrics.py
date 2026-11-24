@@ -12,7 +12,7 @@ Metrics used:
 import logging
 import requests
 
-logger = logging.getLogger("btw_api.coinmetrics")
+logger = logging.getLogger("market_data_collector.coinmetrics")
 
 BASE_URL = "https://community-api.coinmetrics.io/v4"
 TIMEOUT = 30

@@ -12,7 +12,7 @@ from datetime import date, timedelta
 import pandas as pd
 import yfinance as yf
 
-logger = logging.getLogger("btw_api.yahoo_finance")
+logger = logging.getLogger("market_data_collector.yahoo_finance")
 
 OHLCV_KEYS = ["Close", "High", "Low", "Open", "Volume"]
 

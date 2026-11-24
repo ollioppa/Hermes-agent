@@ -21,7 +21,7 @@ from gspread.utils import DateTimeOption, ValueRenderOption
 from google.oauth2.service_account import Credentials
 from src.config import settings
 
-logger = logging.getLogger("btw_api.sheets")
+logger = logging.getLogger("market_data_collector.sheets")
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",

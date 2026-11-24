@@ -98,7 +98,7 @@ def parse_finra_margin_xlsx(blob: bytes) -> list[tuple[date, float]]:
 def fetch_finra_margin(timeout: int = 30) -> list[tuple[date, float]]:
     request = urllib.request.Request(
         FINRA_MARGIN_XLSX_URL,
-        headers={"User-Agent": "btw_api/macro-data-v1"},
+        headers={"User-Agent": "market_data_collector/macro-data-v1"},
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         blob = response.read()

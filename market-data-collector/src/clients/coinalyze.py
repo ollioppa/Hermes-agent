@@ -22,7 +22,7 @@ from datetime import date, datetime, timezone
 
 from src.config import settings
 
-logger = logging.getLogger("btw_api.coinalyze")
+logger = logging.getLogger("market_data_collector.coinalyze")
 
 BASE_URL = "https://api.coinalyze.net/v1"
 TIMEOUT = 60

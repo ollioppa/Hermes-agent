@@ -3,7 +3,7 @@ import os
 from src.config import settings
 
 
-def setup_logging(name: str = "btw_api") -> logging.Logger:
+def setup_logging(name: str = "market_data_collector") -> logging.Logger:
     logger = logging.getLogger(name)
     if logger.handlers:
         return logger

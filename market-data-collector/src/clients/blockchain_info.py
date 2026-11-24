@@ -9,7 +9,7 @@ import logging
 import requests
 from datetime import date
 
-logger = logging.getLogger("btw_api.blockchain_info")
+logger = logging.getLogger("market_data_collector.blockchain_info")
 
 BASE_URL = "https://api.blockchain.info/charts"
 TIMEOUT = 30

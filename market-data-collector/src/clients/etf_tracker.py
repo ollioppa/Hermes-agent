@@ -12,7 +12,7 @@ import re
 import requests
 from datetime import datetime
 
-logger = logging.getLogger("btw_api.etf_tracker")
+logger = logging.getLogger("market_data_collector.etf_tracker")
 
 FARSIDE_URL = "https://r.jina.ai/https://farside.co.uk/bitcoin-etf-flow-all-data/"
 TIMEOUT = 30

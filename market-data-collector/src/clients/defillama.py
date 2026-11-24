@@ -18,7 +18,7 @@ import time
 import requests
 from datetime import date
 
-logger = logging.getLogger("btw_api.defillama")
+logger = logging.getLogger("market_data_collector.defillama")
 
 BASE_URL = "https://stablecoins.llama.fi"
 TIMEOUT = 30

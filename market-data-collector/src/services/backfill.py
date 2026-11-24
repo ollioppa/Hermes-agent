@@ -60,7 +60,7 @@ from src.services.indicators import compute_all
 from src.services.google_sheets import get_or_create_sheet, get_sheet, batch_write, upsert_rows
 from src.utils.logging_utils import setup_logging
 
-logger = setup_logging("btw_api.backfill")
+logger = setup_logging("market_data_collector.backfill")
 
 DB_SHEET_NAME = "DB"
 MARKET_DATA_SHEET_NAME = "MARKET_DATA"

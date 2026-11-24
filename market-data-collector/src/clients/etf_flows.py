@@ -12,7 +12,7 @@ import logging
 import requests
 from datetime import datetime
 
-logger = logging.getLogger("btw_api.etf_flows")
+logger = logging.getLogger("market_data_collector.etf_flows")
 
 # Farside blocks direct HTTP clients. Jina's HTTPS target is the current
 # retrieval route. Use the all-data page; /btc/ is only a short recent view.

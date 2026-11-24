@@ -488,7 +488,7 @@ def build_sector_snapshot(market: pd.DataFrame, as_of: str | None = None) -> dic
     start = anchor(friday-timedelta(days=7))
     result = {'status':'unavailable', 'start_date':start.isoformat(), 'end_date':end.isoformat(),
               'basis':'USD price return, no dividends; SPDR sector ETF proxies', 'sectors':{}, 'benchmark':None,
-              'source':'Yahoo via existing btw_api MARKET_DATA; sector ETF proxies, SP500 price-index benchmark'}
+              'source':'Yahoo via existing market_data_collector MARKET_DATA; sector ETF proxies, SP500 price-index benchmark'}
     required = ['SP500', *SECTOR_SYMBOL_MAP.values()]
     if market.empty or 'date' not in market or any(c not in market for c in required):
         return result

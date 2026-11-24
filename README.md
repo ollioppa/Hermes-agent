@@ -4,7 +4,7 @@ Three practical projects by Roland Chotika, developed with AI assistance and pub
 
 ## Choose a project
 
-- **[btw-api](btw-api/README.md)** — Python market-data collection, calculations, Google Sheets persistence and structured snapshots. Includes a credential-free synthetic example using the real calculation and snapshot code.
+- **[market-data-collector](market-data-collector/README.md)** — Python market-data collection, calculations, Google Sheets persistence and structured snapshots. Includes a credential-free synthetic example using the real calculation and snapshot code.
 - **[Opportunity Radar](opportunity-radar/README.md)** — equity/ETF research workflow with deterministic Python state management, canonical research prompts and supporting methods. Start with its [agent instructions](opportunity-radar/AGENTS.md) when using an AI harness.
 - **[Documentation Guide](documentation-guide/README.md)** — a reusable documentation method with a neutral worked example. Open `documentation-guide/START-HERE.html` locally for its HTML entry point.
 
@@ -21,11 +21,11 @@ Radar needs an intelligent agent/harness with suitable research and execution to
 
 ## What was verified
 
-- **btw-api:** clean Python 3.14.5 installation on macOS; 255 tests passed; real offline consumer ran twice with identical output; import and network/write isolation checked.
+- **market-data-collector:** clean Python 3.14.5 installation on macOS; 255 tests passed; real offline consumer ran twice with identical output; import and network/write isolation checked.
 - **Opportunity Radar:** clean Python 3.13 installation; 132 tests passed, including another run at the final export location; offline smoke/demo exercised real persistence and reader paths. Canonical prompts and selected research references are included.
 - **Documentation Guide:** method preservation reviewed; example commands executed; local links and packaged entry files checked.
 
-These are scoped checks, not a guarantee of investment performance, live-provider availability, mail delivery, or a newly executed end-to-end LLM research run. Synthetic examples are not market observations. Historical macro inputs intentionally omitted from btw-api must be supplied lawfully for its optional full macro workflow. See each project's limitations.
+These are scoped checks, not a guarantee of investment performance, live-provider availability, mail delivery, or a newly executed end-to-end LLM research run. Synthetic examples are not market observations. Historical macro inputs intentionally omitted from market-data-collector must be supplied lawfully for its optional full macro workflow. See each project's limitations.
 
 ## Export boundary
 

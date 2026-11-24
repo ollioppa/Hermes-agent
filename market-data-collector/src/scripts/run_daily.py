@@ -75,10 +75,10 @@ def main() -> int:
         with FileLock(LOCK_FILE):
             result = run_daily(dry_run=args.dry_run, lookback_days=args.lookback_days)
     except LockBusy:
-        print(f"btw_api daily already running; lock held: {LOCK_FILE}", file=sys.stderr)
+        print(f"market_data_collector daily already running; lock held: {LOCK_FILE}", file=sys.stderr)
         return 75  # EX_TEMPFAIL
     if result["status"] == "partial":
-        print(f"btw_api daily partial: macro={result['macro_failures']} "
+        print(f"market_data_collector daily partial: macro={result['macro_failures']} "
               f"window={result['window_failures']}",
               file=sys.stderr)
         return 2

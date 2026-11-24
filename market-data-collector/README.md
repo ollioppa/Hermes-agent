@@ -1,4 +1,4 @@
-# btw_api — bereinigter lokaler Export
+# Market Data Collector
 
 **Marktdaten sammeln, Kennzahlen berechnen und aus Google Sheets einen strukturierten Snapshot lesen.** Enthalten ist die bestehende BTC-/MSTR-, Markt-/Sektor- und optionale Macro-Pipeline, keine neue Beispielarchitektur. Der lokale Einstieg verwendet ausschließlich synthetische Daten und benötigt keine Konten.
 

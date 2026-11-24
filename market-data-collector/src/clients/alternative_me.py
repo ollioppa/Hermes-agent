@@ -10,7 +10,7 @@ from datetime import date, timedelta
 
 import requests
 
-logger = logging.getLogger("btw_api.alternative_me")
+logger = logging.getLogger("market_data_collector.alternative_me")
 
 BASE_URL = "https://api.alternative.me/fng/"
 TIMEOUT = 15
