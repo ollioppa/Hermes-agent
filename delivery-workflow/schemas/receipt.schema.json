@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "receipt.schema.json",
+  "title": "delivery-workflow Phase Receipt Schema",
+  "type": "object",
+  "required": [
+    "run_id",
+    "phase",
+    "gate",
+    "ok",
+    "timestamp"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string",
+      "enum": [
+        "understand",
+        "spike",
+        "plan",
+        "constraints",
+        "tdd",
+        "integration",
+        "cron",
+        "doc",
+        "verify",
+        "postmortem"
+      ]
+    },
+    "gate": {
+      "type": "string"
+    },
+    "ok": {
+      "type": "boolean"
+    },
+    "evidence": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object"
+        }
+      ]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+rules:
+- reason_code: APPROACH_PROVEN
+  description: A prior experiment supports the approach; cite its evidence.
+  valid_for:
+  - spike
+  evidence_required: true
+  evidence_format: path
+- reason_code: PLAN_EXISTS
+  description: An adequate plan already exists; cite it.
+  valid_for:
+  - plan
+  evidence_required: true
+  evidence_format: path
+- reason_code: NO_CODE
+  description: No executable code is changed.
+  valid_for:
+  - tdd
+  - constraints
+  evidence_required: true
+  evidence_format: path
+- reason_code: NO_OUTPUT_CONTRACT
+  description: No output format contract is changed.
+  valid_for:
+  - constraints
+  evidence_required: true
+  evidence_format: path
+- reason_code: NO_INTEGRATION_POINT
+  description: No activation, integration or caller routing is changed, including replacement
+    or retirement of an internal path.
+  valid_for:
+  - integration
+  evidence_required: true
+  evidence_format: path
+- reason_code: NO_RECURRING_STEP
+  description: No scheduled behavior is changed.
+  valid_for:
+  - cron
+  evidence_required: true
+  evidence_format: path
+- reason_code: NO_CANONICAL_DOC
+  description: No canonical documentation is affected.
+  valid_for:
+  - doc
+  evidence_required: true
+  evidence_format: path
+- reason_code: EXISTING_BUILD_COVERAGE
+  description: Existing build checks already cover the relevant behavior or output contract;
+    cite the checks and rerun them during verification instead of creating duplicates.
+  valid_for:
+  - constraints
+  - tdd
+  evidence_required: true
+  evidence_format: path
+- reason_code: OPERATOR_ASSERTED
+  description: Unverified exclusion; remains flagged until replaced with a supported
+    decision.
+  valid_for:
+  - spike
+  - plan
+  - constraints
+  - tdd
+  - integration
+  - cron
+  - doc
+  evidence_required: false
+  evidence_format: null

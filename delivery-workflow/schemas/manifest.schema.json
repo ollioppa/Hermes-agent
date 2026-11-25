@@ -1,0 +1,199 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "manifest.schema.json",
+  "title": "delivery-workflow Manifest Schema",
+  "type": "object",
+  "required": [
+    "run_id",
+    "task_ref",
+    "phases"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^arc_\\d{8}_\\d{6}_[0-9a-f]{4}$"
+    },
+    "task_ref": {
+      "type": "string"
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/definitions/phase_entry"
+      }
+    },
+    "governance_ack": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/governance_ack_entry"
+      }
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "project_root": {
+      "type": "string"
+    },
+    "lessons_ack": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "applied",
+              "not_applicable"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "governance_ack_entry": {
+      "type": "object",
+      "required": [
+        "module",
+        "status"
+      ],
+      "properties": {
+        "module": {
+          "type": "string",
+          "enum": [
+            "consumer_map",
+            "quality_regression",
+            "pipeline_chunking"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "included",
+            "not_applicable",
+            "anchor_missing"
+          ]
+        },
+        "evidence": {
+          "type": "string"
+        },
+        "anchor_ref": {
+          "type": "string"
+        },
+        "missing_anchor_for": {
+          "type": "string"
+        },
+        "proposed_anchor_path": {
+          "type": "string"
+        },
+        "input_validator_ref": {
+          "type": "string"
+        },
+        "validator_command": {
+          "type": "string"
+        },
+        "validator_output_ref": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true
+    },
+    "phase_entry": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/included_phase"
+        },
+        {
+          "$ref": "#/definitions/excluded_phase"
+        }
+      ]
+    },
+    "included_phase": {
+      "type": "object",
+      "required": [
+        "phase",
+        "decision"
+      ],
+      "properties": {
+        "phase": {
+          "$ref": "#/definitions/phase_name"
+        },
+        "decision": {
+          "const": "included"
+        },
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "excluded_phase": {
+      "type": "object",
+      "required": [
+        "phase",
+        "decision"
+      ],
+      "properties": {
+        "phase": {
+          "$ref": "#/definitions/phase_name"
+        },
+        "decision": {
+          "const": "excluded"
+        },
+        "reason_code": {
+          "$ref": "#/definitions/reason_code"
+        },
+        "evidence_ref": {
+          "type": "string"
+        },
+        "deliverables": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "phase_name": {
+      "type": "string",
+      "enum": [
+        "understand",
+        "spike",
+        "plan",
+        "constraints",
+        "tdd",
+        "integration",
+        "cron",
+        "doc",
+        "verify",
+        "postmortem"
+      ]
+    },
+    "reason_code": {
+      "type": "string"
+    }
+  }
+}

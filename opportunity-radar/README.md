@@ -1,6 +1,8 @@
-# Opportunity Radar — lokaler Exportcandidate
+# Opportunity Radar
 
-**Portables Agentenprojekt mit lokal enthaltenen Fachverfahren; Veröffentlichung noch nicht freigegeben.** Der Radar verbindet LLM-gestütztes Aktien-/ETF-Research mit einem deterministischen SQLite-Kern. Er trennt recherchierte Vorschläge, menschlich aufgenommene Chancen und bestätigte Positionen. Eine Empfehlung bucht keinen Trade.
+Created by Roland Chotika with AI assistance.
+
+**Portables Agentenprojekt mit lokal enthaltenen Fachverfahren; als bereinigter Export veröffentlicht.** Der Radar verbindet LLM-gestütztes Aktien-/ETF-Research mit einem deterministischen SQLite-Kern. Er trennt recherchierte Vorschläge, menschlich aufgenommene Chancen und bestätigte Positionen. Eine Empfehlung bucht keinen Trade.
 
 ```text
 Scanner oder direkte Idee → Agent + LLM + Research-Tools → Vorschlag
@@ -51,8 +53,8 @@ Keine Orders, keine Alpha- oder Renditebehauptung. Evaluation zeigt lokale Preis
 
 Verträge: [Produkt](docs/product-contract.md), [Screening](docs/screening-contract.md), [Positionen](docs/position-lifecycle-contract.md), [Evaluation](docs/evaluation-contract.md), [Delivery](docs/watchdog-mail-contract.md).
 
-Der Projektcode und die eigenen Begleittexte stehen nach ausdrücklicher Freigabe unter der [MIT-Lizenz](LICENSE). Bestehende Rechte und Hinweise zu Drittkomponenten bleiben erhalten: [Herkunft und Lizenzen](PROVENANCE.md). Dieser Ordner ist ein lokaler Reviewcandidate, keine Veröffentlichungsfreigabe.
+Der Projektcode und die eigenen Begleittexte stehen nach ausdrücklicher Freigabe unter der [MIT-Lizenz](LICENSE). Bestehende Rechte und Hinweise zu Drittkomponenten bleiben erhalten: [Herkunft und Lizenzen](PROVENANCE.md). Dieser bereinigte Export wurde mit gesonderter Freigabe als Teil der Collection veröffentlicht.
 
 ### Dokumentationsbaseline
 
-Leser: technisch erfahrene Betreiber. Ergebnis: technischen Kern nachvollziehen und fehlende Produktintegration erkennen. Erhalten: Research-/Admission-/Positionsgrenzen, vier aktive Prompts, fünf Verträge, echte Implementierung/Regressionen. Neutralisiert: Personen, Konten, private Pfade und Jobbindungen. Bewusst ersetzt: Live-Schnellstart durch ausdrücklich begrenzten Offline-Proof; Versandaufträge sind im Candidate nicht autorisiert. Quelle: allowlist-basierte Originaldateien, tatsächliche Hermes-Jobdefinitionen und Runtime-Skill. Ergänzt: selektive lokale Fachreferenzen und frische Installation. Offen: tatsächlicher autorisierter Agentenresearchlauf im gewählten Harness, bedingte private Betreibereingaben und Projekt-Lizenzentscheidung.
+Leser: technisch erfahrene Betreiber. Ergebnis: technischen Kern nachvollziehen und fehlende Produktintegration erkennen. Erhalten: Research-/Admission-/Positionsgrenzen, vier aktive Prompts, fünf Verträge, echte Implementierung/Regressionen. Neutralisiert: Personen, Konten, private Pfade und Jobbindungen. Bewusst ersetzt: Live-Schnellstart durch ausdrücklich begrenzten Offline-Proof; Versandaufträge sind im Candidate nicht autorisiert. Quelle: allowlist-basierte Originaldateien, tatsächliche Hermes-Jobdefinitionen und Runtime-Skill. Ergänzt: selektive lokale Fachreferenzen und frische Installation. Offen: tatsächlicher autorisierter Agentenresearchlauf im gewählten Harness, bedingte private Betreibereingaben.

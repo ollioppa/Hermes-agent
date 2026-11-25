@@ -1,0 +1,101 @@
+versions:
+  lessons: 1
+lessons:
+- id: L-0001-agent-cron-claims-execution
+  purpose: skill_improvement
+  rule: Record actual tool execution and its evidence before claiming an action completed.
+  trigger:
+    phase_included: cron
+    keyword: mail|send|versand
+  severity: note
+  status: active
+- id: L-0002-optional-data-block-soft-fail
+  purpose: skill_improvement
+  rule: Check the documented fallback when an optional source is absent.
+  trigger:
+    phase_included: integration
+    deliverable_glob: '*collector*'
+  severity: note
+  status: active
+- id: L-0003-dead-code-behind-return
+  purpose: skill_improvement
+  rule: Trace the actual control flow before patching an unreachable path.
+  trigger:
+    deliverable_glob: '*.py'
+    keyword: refactor|fix|repair|patch
+  severity: note
+  status: active
+- id: L-0004-read-source-before-patch
+  purpose: skill_improvement
+  rule: Inspect the current source and failure before changing it.
+  trigger:
+    keyword: patch|fix|migrat|umbau|refactor|cleanup
+  severity: note
+  status: active
+- id: L-0005-design-impl-drift
+  purpose: skill_improvement
+  rule: Update the canonical design when behavior or its contract changes.
+  trigger:
+    keyword: \bdesign\b|\bspec\b|\bvalidator\b|\bschwelle\b|\bthreshold\b
+  severity: note
+  status: active
+- id: L-0006-gate-needs-hard-language
+  purpose: skill_improvement
+  rule: Check that validators reject invalid input and accept valid input.
+  trigger:
+    deliverable_glob: '*validate*'
+    keyword: validator|gate|cron
+  severity: note
+  status: active
+- id: L-0007-three-rounds-same-direction-stop
+  purpose: skill_improvement
+  rule: After repeated attempts without progress, reassess the approach and the evidence.
+  trigger:
+    always: true
+  severity: note
+  status: active
+- id: L-0008-path-is-no-contract
+  purpose: skill_improvement
+  rule: Resolve and verify the interpreter actually used by every command.
+  trigger:
+    deliverable_glob: '*.py'
+    keyword: cron|script|cli|path
+  severity: note
+  status: active
+- id: L-0009-prompt-only-needs-e2e
+  purpose: skill_improvement
+  rule: Distinguish prompt structure checks from an observed run on the intended host.
+  trigger:
+    keyword: prompt|council|chair|outflanker
+  severity: note
+  status: active
+- id: L-0010-anchor-is-not-a-chunk
+  purpose: skill_improvement
+  rule: Split large changes into independently verifiable units.
+  trigger:
+    phase_included: integration
+    keyword: migrat|anchor|umbrella
+  severity: note
+  status: active
+- id: L-0011-verify-is-not-arc-close
+  purpose: skill_improvement
+  rule: Check evidence, documentation and remaining work before declaring completion.
+  trigger:
+    keyword: verify|verifiz|review|audit
+  severity: note
+  status: active
+- id: L-0012-trigger-regex-frontmatter-collision
+  purpose: skill_improvement
+  rule: Match process guidance against task content rather than administrative YAML
+    keys.
+  trigger:
+    keyword: frontmatter|fixture
+  severity: note
+  status: active
+- id: L-0013-verdict-data-assumptions-need-spike
+  purpose: skill_improvement
+  rule: Check assumptions about actual data before implementing a diagnostic verdict.
+  trigger:
+    keyword: council|verdict|rca
+  severity: note
+  status: active

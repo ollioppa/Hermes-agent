@@ -4,9 +4,9 @@
 
 Source, Regressionstests, statische Screeningkonfiguration, vier aktuelle Prompts und fünf Verträge stammen aus dem lokalen Opportunity-Radar-Projekt, selektiv kopiert und neutralisiert. Die exakte lokale Zuordnung/Hashes stehen nur im nicht zu verteilenden Reviewbericht und `.verification/source-manifest.json`.
 
-Roland Chotika hat MIT ausdrücklich für diesen lokalen Radar-Export freigegeben; siehe LICENSE. Die ursprünglichen Projektquellen enthielten keine Projektlizenz. Die Freigabe gilt für die Rechte, die der Lizenzgeber vergeben kann; bestehende Rechte und Notices von Drittkomponenten sowie Provider-Datenrechte bleiben unberührt. Sie ist keine Freigabe zum Upload oder zur Veröffentlichung.
+Roland Chotika hat MIT ausdrücklich für diesen lokalen Radar-Export freigegeben; siehe LICENSE. Die ursprünglichen Projektquellen enthielten keine Projektlizenz. Die Freigabe gilt für die Rechte, die der Lizenzgeber vergeben kann; bestehende Rechte und Notices von Drittkomponenten sowie Provider-Datenrechte bleiben unberührt. Die Veröffentlichung dieses bereinigten Exports als Teil der Collection wurde gesondert autorisiert.
 
-Neue Dateien dieses Candidates: README, AGENTS, Runtime-/Herkunftsdokumentation und Offline-Demo. Auch ihnen wird hier keine erfundene Freigabelizenz gegeben. Der Original-Freeze wurde weder kopiert noch geändert; diese Kopie beansprucht nicht dessen ursprüngliche Hashbindung.
+Neue Dateien dieses Candidates: README, AGENTS, Runtime-/Herkunftsdokumentation und Offline-Demo. Diese eigenen Begleitdateien fallen ebenfalls unter die ausdrücklich gewählte Projektlizenz MIT. Der Original-Freeze wurde weder kopiert noch geändert; diese Kopie beansprucht nicht dessen ursprüngliche Hashbindung.
 
 ## Dependencies, nicht eingebettet
 
@@ -44,7 +44,7 @@ Unter `docs/research/` liegen neutralisierte Ableitungen tatsächlicher lokaler 
 
 Private Namen, absolute Pfade, persönliche Ausschlusspräferenzen, konkrete private Fall-/Bestandsdaten und fremde produktive Jobbindungen wurden entfernt oder als ausdrücklich benötigte Betreibereingabe abgegrenzt. Keine ganze Skillbibliothek kopiert. Quellhashes, Zielhashes und die lokale Zuordnung liegen in `.verification/domain-source-manifest.json`; portable Zielhashes und Quellenkennungen in `docs/research/PROVENANCE.json`. Der kanonische Deep Dive blieb in diesem Schritt bytegleich.
 
-Die MIT-Felder einzelner Quellen werden als Herkunftsinformation erhalten, nicht als pauschale Rechtefreigabe aller Dateien ausgelegt. Die Projektlizenz MIT wurde durch ausdrückliche Entscheidung für Radar ergänzt, nicht automatisch von einem anderen Projekt übertragen. Vor Veröffentlichung sind Rechte und erforderliche Notices der ausgewählten Ableitungen zu bestätigen.
+Die MIT-Felder einzelner Quellen werden als Herkunftsinformation erhalten, nicht als pauschale Rechtefreigabe aller Dateien ausgelegt. Die Projektlizenz MIT wurde durch ausdrückliche Entscheidung für Radar ergänzt, nicht automatisch von einem anderen Projekt übertragen. Die Veröffentlichung dieses bereinigten Exports wurde autorisiert; bestehende Rechte und erforderliche Notices der ausgewählten Ableitungen bleiben unberührt.
 
 ## Nicht verteilen
 

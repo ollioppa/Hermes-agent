@@ -1,5 +1,7 @@
 # Documentation Guide
 
+Created by Roland Chotika with AI assistance.
+
 [Quickstart](#quickstart) · [Presentation](#presentation) · [Offline visual entry](START-HERE.html)
 
 ## Quickstart
@@ -46,4 +48,4 @@ Start with the [Quickstart](#quickstart), then judge the actual answer: can a re
 
 The files are offline-readable; using an online AI service is separate. Browser layout is provided by START-HERE.html, not guaranteed for every Markdown renderer. Wiki publishing, automatic skill discovery and recipient-side AI execution are not bundled integrations.
 
-This is a **local review candidate**, not a separately released product. Rights and redistribution remain subject to [PROVENANCE.md](PROVENANCE.md); MIT has been explicitly authorized for this export; see [LICENSE](LICENSE). The package contains README.md, METHOD.md, REFERENCE.md, START-HERE.html, example.md PROVENANCE.md and LICENSE. Internal review records are not included. Do not infer an open-source license from another component of a combined package.
+This sanitized export is **published as part of the project collection**. Rights and redistribution remain subject to [PROVENANCE.md](PROVENANCE.md); MIT has been explicitly authorized for this export; see [LICENSE](LICENSE). The package contains README.md, METHOD.md, REFERENCE.md, START-HERE.html, example.md PROVENANCE.md and LICENSE. Internal review records are not included. Do not infer an open-source license from another component of a combined package.

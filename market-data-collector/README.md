@@ -1,5 +1,7 @@
 # Market Data Collector
 
+Created by Roland Chotika with AI assistance.
+
 **Marktdaten sammeln, Kennzahlen berechnen und aus Google Sheets einen strukturierten Snapshot lesen.** Enthalten ist die bestehende BTC-/MSTR-, Markt-/Sektor- und optionale Macro-Pipeline, keine neue Beispielarchitektur. Der lokale Einstieg verwendet ausschließlich synthetische Daten und benötigt keine Konten.
 
 ```text
@@ -7,7 +9,7 @@ Live:    Provider → Rowbuilder + Kennzahlen → Google Sheets → Snapshot + S
 Offline: synthetische Serien → dieselben Rowbuilder → Speichertransport → derselbe Consumer
 ```
 
-Der Projektcode steht unter der [MIT-Lizenz](LICENSE); Rechte an Drittkomponenten und Providerdaten bleiben davon unberührt (siehe `RIGHTS.md`). **Dieser Export liegt bislang nur lokal vor; eine Veröffentlichung ist noch nicht freigegeben.** Originaldaten, Konten, Schlüssel, Scheduler und persönliche Konfiguration sind nicht enthalten.
+Der Projektcode steht unter der [MIT-Lizenz](LICENSE); Rechte an Drittkomponenten und Providerdaten bleiben davon unberührt (siehe `RIGHTS.md`). **Dieser bereinigte Export ist als Teil der Collection veröffentlicht.** Originaldaten, Konten, Schlüssel, Scheduler und persönliche Konfiguration sind nicht enthalten.
 
 ## Schnellstart ohne Netzwerk und ohne Zugangsdaten
 

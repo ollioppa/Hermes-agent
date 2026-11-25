@@ -1,0 +1,29 @@
+modules:
+  consumer_map:
+    severity: note
+    trigger:
+      any:
+      - \b(cron\w*|registr\w*|consumer\w*|report\w*|prompt\w*|mail\w*)\b
+    receipt:
+      require_consumer_map_ref: true
+      require_grep_output: true
+      require_hardcoding_column: true
+  quality_regression:
+    severity: note
+    trigger:
+      any:
+      - \b(council|quality|regression|analysis)\b
+    receipt:
+      anchor_missing_severity: warn
+      require_anchor_or_missing_anchor_reason: true
+  pipeline_chunking:
+    severity: note
+    trigger:
+      all:
+      - \b(pipeline\w*|sequence\w*|council|synthesis|reasoning|llm)\b
+      - \b(bundle\w*|sources?|snapshot\w*|monthly|weekly|daily)\b
+    receipt:
+      require_input_validator_ref: true
+      require_validator_output_ref: true
+      require_validator_verdict_pass: true
+      require_validator_before_llm: true

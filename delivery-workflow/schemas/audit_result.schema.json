@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "audit_result.schema.json",
+  "title": "delivery-workflow Audit Result Schema",
+  "type": "object",
+  "required": [
+    "run_id",
+    "manifest_ref",
+    "status",
+    "timestamp"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "manifest_ref": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "flagged",
+        "blocked"
+      ]
+    },
+    "flags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "phase",
+          "reason",
+          "evidence"
+        ],
+        "properties": {
+          "phase": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "phase",
+          "rule",
+          "detail"
+        ],
+        "properties": {
+          "phase": {
+            "type": "string"
+          },
+          "rule": {
+            "type": "string",
+            "enum": [
+              "MANDATORY_EXCLUDED",
+              "INVALID_REASON_CODE",
+              "MISSING_EVIDENCE",
+              "EVIDENCE_NOT_FOUND",
+              "SCHEMA_INVALID"
+            ]
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

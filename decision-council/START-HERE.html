@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Use Decision Council to test an uncertain decision through independent reviews, a challenge to shared assumptions, and a reasoned recommendation. Quickstart and explained example.">
+  <title>Decision Council — Find the weak spots before you act</title>
+  <style>
+    :root { color-scheme:light; --paper:#f7f5ee; --ink:#183b36; --muted:#52635b; --line:#d2d9cd; --white:#fffef9; --soft:#edf1e7; --accent:#d3e6a8; --orange:#a5482c; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:108px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; text-underline-offset:4px; }
+    a:hover { text-decoration-thickness:2px; }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--orange); outline-offset:5px; }
+    [hidden] { display:none!important; }
+    .shell { max-width:1220px; margin:auto; padding:0 38px; }
+    .skip { position:absolute; top:-100px; left:20px; z-index:10; padding:10px 16px; background:var(--white); }
+    .skip:focus { top:12px; }
+    .topbar { position:sticky; top:0; z-index:5; border-bottom:1px solid var(--line); background:var(--paper); }
+    .topbar .shell { min-height:78px; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; font-size:22px; font-weight:750; text-decoration:none; }
+    .mark { width:30px; height:30px; display:grid; grid-template-columns:1fr 1fr; gap:3px; transform:rotate(-8deg); }
+    .mark i { background:var(--ink); border-radius:3px; }
+    .mark i:last-child { background:var(--orange); }
+    nav { display:flex; gap:5px; padding:5px; border:1px solid var(--line); border-radius:28px; }
+    nav a { padding:7px 18px; border-radius:22px; text-decoration:none; font-size:15px; font-weight:650; }
+    nav a[aria-current=page] { background:var(--ink); color:var(--white); }
+    .utility { font-size:14px; color:var(--muted); }
+    .entry { padding:36px 0 34px; }
+    .eyebrow { margin:0 0 14px; color:var(--muted); font-size:12px; font-weight:750; letter-spacing:.13em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { margin-bottom:23px; font-size:clamp(38px,4.05vw,55px); line-height:1.08; letter-spacing:-.05em; font-weight:680; }
+    h2 { margin-bottom:17px; font-size:31px; line-height:1.2; letter-spacing:-.035em; font-weight:660; }
+    h3 { margin-bottom:10px; font-size:20px; line-height:1.3; }
+    p { margin-bottom:16px; }
+    .hero-grid { display:grid; grid-template-columns:1.07fr 1fr; align-items:center; gap:58px; }
+    .lead { font-size:20px; line-height:1.5; }
+    .body-copy { color:var(--muted); }
+    .actions { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin-top:23px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:20px; padding:12px 19px; border:1px solid var(--ink); border-radius:7px; background:var(--ink); color:var(--white); text-decoration:none; font-size:16px; font-weight:650; }
+    .button:hover { background:#245149; }
+    .text-link { font-size:16px; font-weight:650; }
+    .fit { margin:19px 0 0; font-size:15px; color:var(--muted); }
+    figure { margin:0; }
+    .diagram { padding:22px 25px; border:1px solid var(--line); border-radius:13px; background:var(--white); }
+    .diagram figcaption { margin-bottom:16px; font-size:14px; font-weight:650; }
+    .stage { padding:10px 14px; border:1px solid var(--line); border-radius:7px; text-align:center; font-size:16px; font-weight:650; }
+    .stage small { display:block; margin-top:2px; font-size:13px; font-weight:400; color:var(--muted); }
+    .facts { background:var(--soft); }
+    .separate { display:flex; align-items:center; justify-content:center; gap:7px; margin:2px 0 8px; }
+    .separate span { width:29px; height:33px; border:1px solid #8fa98e; border-radius:4px; background:var(--soft); font-size:13px; line-height:31px; }
+    .arrow { margin:3px 0; color:#758673; text-align:center; line-height:1.1; font-size:22px; }
+    .challenge { border-color:#dbb49c; background:#fff3e8; }
+    .outcome { background:var(--ink); color:var(--white); }
+    .outcome small { color:#dce7d9; }
+    .section { padding:38px 0; border-top:1px solid var(--line); }
+    .split { display:grid; grid-template-columns:.8fr 1.2fr; gap:65px; }
+    .measure { max-width:800px; }
+    .muted, .small { color:var(--muted); }
+    .small { font-size:14px; }
+    .section p:last-child { margin-bottom:0; }
+    .quick-head { display:flex; justify-content:space-between; align-items:flex-end; gap:25px; margin-bottom:25px; }
+    .quick-head h1 { margin:0; font-size:43px; }
+    .mini-flow { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin-bottom:3px; font-size:13px; }
+    .mini-flow strong { padding:6px 9px; border:1px solid var(--line); border-radius:4px; background:var(--soft); font-weight:600; }
+    .quick-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; }
+    .answers { margin:0; padding:0; list-style:none; }
+    .answers li { padding:11px 0; border-top:1px solid var(--line); font-size:16px; }
+    .answers li:first-child { border:0; padding-top:0; }
+    .answers strong { display:block; margin-bottom:3px; }
+    .start-panel { padding:23px 25px; border:1px solid var(--line); border-radius:12px; background:var(--white); }
+    .start-panel h2 { font-size:23px; }
+    .start-panel p, .start-panel li { font-size:15px; }
+    .start-panel ol { padding-left:21px; margin:15px 0; }
+    .start-panel li { margin:8px 0; padding-left:3px; }
+    .result { padding-top:14px; border-top:1px solid var(--line); }
+    pre { margin:12px 0 16px; padding:15px 17px; background:var(--soft); border-left:3px solid var(--ink); white-space:pre-wrap; overflow-wrap:anywhere; }
+    code { font: .9em/1.55 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+    pre code { font-size:14px; }
+    .jump-links { display:flex; flex-wrap:wrap; gap:12px 24px; margin-top:23px; font-size:15px; }
+    .steps { margin:0; padding:0; list-style:none; counter-reset:steps; }
+    .steps > li { position:relative; padding:0 0 22px 41px; counter-increment:steps; }
+    .steps > li:before { content:counter(steps); position:absolute; left:0; top:0; width:27px; height:27px; border:1px solid var(--line); border-radius:50%; text-align:center; font-size:14px; line-height:25px; }
+    .steps strong { display:block; margin-bottom:6px; }
+    .steps p { font-size:16px; }
+    .example-banner { margin-bottom:22px; padding:15px 19px; border-left:3px solid var(--orange); background:#fff3e8; font-size:15px; }
+    .example-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+    .card { padding:23px 25px; border:1px solid var(--line); border-radius:10px; background:var(--white); }
+    .card p, .card li { font-size:16px; }
+    .card ol { margin:0; padding-left:23px; }
+    .card li { padding-left:3px; margin:9px 0; }
+    blockquote { margin:12px 0 19px; font-size:23px; line-height:1.4; letter-spacing:-.02em; }
+    .lens-list { margin:0; padding:0; list-style:none; }
+    .lens-list li { padding:12px 0; border-top:1px solid var(--line); }
+    .lens-list li:first-child { padding-top:0; border:0; }
+    .lens-list strong { display:block; margin-bottom:3px; }
+    .basis { color:var(--muted); font-size:13px; white-space:nowrap; }
+    .example-followup { margin-top:24px; }
+    .challenge-card { background:#fff3e8; border-color:#dbb49c; }
+    .verdict-card { background:var(--ink); color:var(--white); }
+    .verdict-card .eyebrow, .verdict-card .small { color:#dce7d9; }
+    .verdict-card h3 { font-size:24px; }
+    .takeaway { margin-top:24px; padding:20px 0 0; border-top:1px solid var(--line); }
+    .table-wrap { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; font-size:16px; }
+    caption { text-align:left; margin-bottom:10px; color:var(--muted); font-size:14px; }
+    th,td { padding:12px 14px 12px 0; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    thead th { color:var(--muted); font-size:13px; font-weight:650; }
+    tbody th { font-weight:650; }
+    .report-list { margin:0; }
+    .report-list dt { margin-top:14px; font-weight:700; }
+    .report-list dt:first-child { margin-top:0; }
+    .report-list dd { margin:3px 0 0; color:var(--muted); font-size:16px; }
+    .notice { padding:14px 18px; border-left:3px solid var(--ink); background:var(--soft); font-size:15px; }
+    details { border-top:1px solid var(--line); }
+    details:last-child { border-bottom:1px solid var(--line); }
+    summary { padding:16px 0; cursor:pointer; font-weight:650; font-size:17px; }
+    .detail { padding:0 0 18px; }
+    .detail p, .detail li { font-size:16px; }
+    .detail p:last-child { margin:0; }
+    footer { padding:23px 0 28px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); }
+    footer .shell { display:flex; justify-content:space-between; gap:25px; }
+    footer a { margin-left:16px; }
+    @media(max-width:950px) {
+      .shell { padding:0 27px; }
+      .hero-grid { gap:30px; }
+      .split { gap:35px; }
+      .utility { display:none; }
+      .quick-head { align-items:flex-start; flex-direction:column; gap:17px; }
+      h1 { font-size:43px; }
+    }
+    @media(max-width:700px) {
+      .shell { padding:0 21px; }
+      .topbar .shell { min-height:73px; gap:8px; }
+      .brand { font-size:19px; gap:8px; }
+      .mark { width:24px; height:24px; }
+      nav a { padding:7px 11px; font-size:13px; }
+      .hero-grid,.quick-grid,.split,.example-grid { grid-template-columns:1fr; gap:25px; }
+      .entry { padding:31px 0; }
+      h1 { font-size:42px; }
+      h2 { font-size:28px; }
+      .quick-head h1 { font-size:37px; }
+      .lead { font-size:19px; }
+      .section { padding:30px 0; }
+      .diagram,.start-panel,.card { padding:21px; }
+      .mini-flow { font-size:12px; gap:5px; }
+      .mini-flow strong { padding:6px 7px; }
+      .actions { gap:17px; }
+      footer .shell { flex-direction:column; gap:10px; }
+      footer a { margin:0 16px 0 0; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print {
+      .topbar { position:static; }
+      nav,.actions,.jump-links,.utility,.skip { display:none; }
+      body { background:white; font-size:11pt; }
+      .shell { max-width:none; padding:0; }
+      h1 { font-size:30pt; }
+      .view[hidden] { display:block!important; }
+      .section,.entry { padding:22px 0; }
+      .hero-grid,.split,.quick-grid { gap:25px; }
+      .example-grid { display:block; }
+      .card { margin-bottom:15px; break-inside:avoid; }
+      details::details-content { content-visibility:visible!important; }
+      details .detail { display:block!important; }
+      details { break-inside:avoid; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to guide</a>
+  <header class="topbar">
+    <div class="shell">
+      <a class="brand" href="#presentation"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Decision Council</a>
+      <nav aria-label="Reading paths">
+        <a href="#quickstart" data-view="quickstart">Quickstart</a>
+        <a href="#presentation" data-view="presentation" aria-current="page">Presentation</a>
+      </nav>
+      <a class="utility" href="#help">Questions &amp; help</a>
+    </div>
+  </header>
+  <main class="shell" id="main">
+    <div class="view" id="presentation">
+      <section class="entry" aria-labelledby="presentation-title">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">A portable decision-review method</p>
+            <h1 id="presentation-title">Find the weak spots<br>before you act.</h1>
+            <p class="lead">Give Decision Council an uncertain design, plan or suspected cause. Get a recommendation, its evidence and the check that could change it.</p>
+            <p class="body-copy">Decision Council organises four independent reviews of facts you approve, challenges their shared assumptions and saves the reasoning. You get a reusable review process without setting up each role yourself.</p>
+            <div class="actions">
+              <a class="button" href="#method">See how it works <span aria-hidden="true">↓</span></a>
+              <a class="text-link" href="#quickstart">Ready to start →</a>
+            </div>
+            <p class="fit">For decisions with alternatives. A simple lookup usually needs only a chat.</p>
+          </div>
+          <figure class="diagram" aria-labelledby="diagram-title">
+            <figcaption id="diagram-title">Shared evidence. Independent scrutiny.</figcaption>
+            <div class="stage facts">Facts you have reviewed<small>Including their sources and uncertainties</small></div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="stage">
+              <div class="separate" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span></div>
+              Four independent reviews<small>Different questions · no shared answers</small>
+            </div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="stage challenge">Challenge their shared assumptions<small>Even agreement can hide a blind spot</small></div>
+            <div class="arrow" aria-hidden="true">↓</div>
+            <div class="stage outcome">A reasoned recommendation<small>What holds up · what could change it</small></div>
+          </figure>
+        </div>
+      </section>
+      <section class="section" id="method" aria-labelledby="method-title">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Why the separate reviews matter</p>
+            <h2 id="method-title">Test the answer.<br>Then test the assumptions.</h2>
+            <p class="muted">A capable agent can organise this method too. Decision Council provides the reusable instructions, review checkpoints and saved progress, so you do not have to coordinate them anew.</p>
+          </div>
+          <div>
+            <p>One agent gathers the evidence; you review it. Four more each examine a different question about that same evidence. They cannot see one another’s answers, so one early answer does not become the starting point for all four.</p>
+            <p>The <strong>outflanker</strong> is a further agent that challenges the assumptions shared by those reviews. The <strong>chair</strong> is the final reviewer: it weighs the arguments, explains the recommendation and identifies what could change it. Both receive the original evidence and all four findings.</p>
+            <p>That is seven separate agent calls. The outcome rests on the evidence, rather than a majority vote. Separate reviews can still share a mistake; they do not guarantee a correct answer.</p>
+            <p><a class="text-link" href="#example">Follow one decision through the method ↓</a></p>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="example" aria-labelledby="example-title">
+        <p class="eyebrow">A decision through the review</p>
+        <h2 id="example-title">Would a small pilot actually solve the risk?</h2>
+        <p class="example-banner"><strong>Fictional illustration.</strong> The documents, facts and responses below are invented to explain the method. This is not a recorded Decision Council run.</p>
+        <div class="example-grid">
+          <div class="card">
+            <h3>1. Agree what you are deciding</h3>
+            <blockquote>“Can we roll out the new service to every team on Monday?”</blockquote>
+            <p>You supply the rollout plan and recovery notes. Decision Council helps frame the choice: proceed on Monday, use a limited pilot, or wait for missing checks.</p>
+            <p>You confirm the boundary—rollout readiness, including data recovery and support—and choose from the models the main agent proposes.</p>
+            <p class="small">This is your first checkpoint: the question, boundary and models.</p>
+          </div>
+          <div class="card">
+            <h3>2. Review the evidence</h3>
+            <ol>
+              <li><strong>F1:</strong> The plan enables all teams on Monday morning. First use converts their stored records. <span class="basis">Plan, §1</span></li>
+              <li><strong>F2:</strong> Switching back to the old interface was tested. Restoring converted records was not. <span class="basis">Recovery notes, §2</span></li>
+              <li><strong>F3:</strong> Support training is scheduled for Monday afternoon, after launch. <span class="basis">Plan, §3</span></li>
+              <li><strong>F4:</strong> A small pilot is possible, but it uses the same record conversion. <span class="basis">Plan, §4</span></li>
+            </ol>
+            <p class="small">These are the example’s entire evidence base. In a real run, facts include source references, dates and uncertainty. You correct omissions before accepting them.</p>
+          </div>
+        </div>
+        <div class="example-grid example-followup">
+          <div class="card">
+            <h3>3. Four agents ask different questions</h3>
+            <ul class="lens-list">
+              <li><strong>Which assumption is weakest?</strong>The plan treats a return to the old interface as recovery. Data restoration is still untested. <span class="basis">F2</span></li>
+              <li><strong>Which dependency could block the plan?</strong>Support is trained after the planned launch. Move that preparation before first use. <span class="basis">F3</span></li>
+              <li><strong>Where is the scope wider than it looks?</strong>This changes stored records, so readiness includes data recovery as well as enabling a service. <span class="basis">F1–F2</span></li>
+              <li><strong>Which step lacks a proven way back?</strong>The first record conversion. The supplied checks do not establish how to undo it. <span class="basis">F1–F2</span></li>
+            </ul>
+          </div>
+          <div class="card challenge-card">
+            <p class="eyebrow">4. Challenge the tempting answer</p>
+            <h3>“Start with a pilot” still needs scrutiny.</h3>
+            <p>A smaller launch would affect fewer teams. But the outflanker challenges the assumption that reducing the audience makes the launch recoverable.</p>
+            <blockquote>“The pilot converts records too. Fewer affected teams does not establish a way to restore their data.”</blockquote>
+            <p>The decisive check is whether representative converted records can be restored and used by the old service. A smaller audience alone does not answer that question. <span class="basis">F2, F4</span></p>
+          </div>
+        </div>
+        <div class="example-grid example-followup">
+          <div class="card verdict-card">
+            <p class="eyebrow">5. Read the recommendation</p>
+            <h3>Establish recovery before the first pilot.</h3>
+            <p>The chair would not recommend the Monday rollout from this evidence. A pilot limits exposure, but its data recovery is still unproven.</p>
+            <p><strong>Next check:</strong> rehearse conversion and restoration on representative disposable copies. Agree what counts as successful recovery, and prepare support before first use.</p>
+            <p><strong>Revisit when:</strong> recovery and support readiness are demonstrated. Then assess a limited pilot against its agreed success and stop conditions.</p>
+            <p class="small">Illustrative judgment based on F1–F4. No rollout or test is performed by this page.</p>
+          </div>
+          <div class="card">
+            <h3>What the extra challenge contributes</h3>
+            <p>The independent reviews expose several weaknesses. The outflanker tests whether a seemingly sensible response—“make it smaller”—actually addresses the most consequential one.</p>
+            <p>The saved result gives you the recommendation, the reasoning and the evidence needed to revisit it. You remain responsible for what happens next; a Decision Council review does not approve or execute a change.</p>
+            <p><a href="#report">How to read your own report →</a></p>
+          </div>
+        </div>
+        <p class="takeaway">You can now distinguish the four viewpoints, the challenge to their shared frame, and the final judgment. Use Decision Council when that depth is worth the extra model usage and waiting time. <a href="#quickstart"><strong>Start with your own question →</strong></a></p>
+      </section>
+      <section class="section" id="review-types" aria-labelledby="review-types-title">
+        <div class="split">
+          <div><p class="eyebrow">Choose the question</p><h2 id="review-types-title">The method travels.<br>The viewpoints change.</h2><p class="muted">The rollout is one illustration. Decision Council can review a design, a plan or a proposed cause; its subject does not have to be the repository where the skill is installed.</p></div>
+          <div class="table-wrap">
+            <table>
+              <caption>The main agent selects the review type with you.</caption>
+              <thead><tr><th scope="col">Review</th><th scope="col">The four questions focus on</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Design</th><td>The first failure, costly reversals, relevant past failures in the supplied evidence, and what can be removed.</td></tr>
+                <tr><th scope="row">Plan</th><td>The weakest assumption, blocking dependencies, hidden scope and steps without a way back.</td></tr>
+                <tr><th scope="row">Suspected cause</th><td>Weak causal evidence, competing causes, the first demonstrated divergence and causes versus symptoms.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="view" id="quickstart">
+      <section class="entry" aria-labelledby="quickstart-title">
+        <p class="eyebrow">Quickstart</p>
+        <div class="quick-head">
+          <h1 id="quickstart-title">Bring one question.</h1>
+          <figure class="mini-flow" aria-label="Reviewed facts lead to four independent reviews, a challenge to shared assumptions, and a recommendation.">
+            <strong>Facts</strong><span aria-hidden="true">→</span><strong>4 reviews</strong><span aria-hidden="true">→</span><strong>Challenge</strong><span aria-hidden="true">→</span><strong>Recommendation</strong>
+          </figure>
+        </div>
+        <div class="quick-grid">
+          <ul class="answers">
+            <li><strong>What does it do?</strong>Tests a decision and returns a recommendation, its evidence and the check that could change it.</li>
+            <li><strong>Why use Decision Council?</strong>It organises four independent reviews, challenges their shared assumptions and saves the reasoning. You do not have to set up that process each time.</li>
+            <li><strong>When is it useful?</strong>For a design, plan or suspected cause with plausible alternatives. Use an ordinary chat for a simple lookup.</li>
+            <li><strong>What do I need?</strong>A question; relevant sources if you have them. Decision Council needs Python 3.10+ and environment support for separate agents with selectable models. The main agent checks the setup. <a href="#install">Check setup ↓</a></li>
+          </ul>
+          <div class="start-panel">
+            <h2>Start in your main conversation</h2>
+            <p>After checking the required capabilities, use this prompt with your own question:</p>
+            <pre><code>Use Decision Council to review this rollout plan: &lt;file&gt;.
+What could go wrong, and what should we check before proceeding?</code></pre>
+            <p>Replace <code>&lt;file&gt;</code> with your plan’s path, or describe the decision directly.</p>
+            <ol>
+              <li><strong>Agree the review.</strong> Confirm the question, boundary and proposed models.</li>
+              <li><strong>Review the facts.</strong> Correct gaps or mistakes before the four agents begin.</li>
+            </ol>
+            <p class="result"><strong>Then:</strong> read the explanation and saved <code>report.md</code>. Expect reasons, unresolved questions and a next check. “Undecidable” is a valid result.</p>
+          </div>
+        </div>
+        <div class="jump-links" aria-label="Quickstart details"><a href="#install">Setup</a><a href="#sources">Sources</a><a href="#models">Model choices</a><a href="#report">Read the result</a><a href="#help">Help</a></div>
+      </section>
+    </div>
+
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="split">
+        <div>
+          <p class="eyebrow">First use</p>
+          <h2 id="install-title">Load the instructions.<br>Check the capabilities.</h2>
+          <p class="muted">Keep the supplied <code>decision-council</code> folder together. Make <code>SKILL.md</code> and its relative references available to your main conversation.</p>
+          <p class="small">Python 3.10+ and support for separate agents with chosen models are required. The main agent checks these; you do not need to prepare configuration files yourself.</p>
+        </div>
+        <ol class="steps">
+          <li><strong>Ask the main agent to read the instructions and check capabilities.</strong>
+            <pre><code>Read &lt;package-folder&gt;/SKILL.md and check its execution requirements before starting.</code></pre>
+            <p>Replace the placeholder with the supplied folder’s location. Loading or registration depends on your environment; no installation destination or UI command is assumed.</p>
+          </li>
+          <li><strong>Start with <code>Decision Council</code> and your question.</strong><p>Describe the decision in your own words and point to relevant evidence. The main agent helps clarify the alternatives and boundary. <a href="#quickstart">Use the example prompt ↑</a></p></li>
+          <li><strong>Choose a personal report folder when asked.</strong><p>On first use, choose a folder outside Git repositories and the skill. Decision Council remembers it. Then confirm the question and model choice, and review the gathered facts before analysis starts.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="sources" aria-labelledby="sources-title">
+      <div class="split">
+        <div><p class="eyebrow">Give the review a basis</p><h2 id="sources-title">Point to what the answer depends on.</h2><p class="muted">Use documents, logs, workspace files, IssueTracker tickets or CodeReview pull requests—the proposed code changes. A general question can also begin with your description alone.</p></div>
+        <div>
+          <p>For code questions, include the relevant code. A proposal or ticket description does not establish what the implementation actually does.</p>
+          <pre><code>Use Decision Council to review &lt;CodeReview PR link&gt; against &lt;IssueTracker ticket link&gt;.
+Use this workspace for context. Does the change meet the acceptance criteria?</code></pre>
+          <p>Decision Council uses the access available in the execution environment. At fact review, check which sources were read, only partly read or unavailable, and whether code revisions match. Missing comments or inaccessible checks stay visible in the report.</p>
+          <p class="small">Accepting the evidence does not make uncertain statements true. Ask for corrections before the four reviews; changed facts require a revised run that preserves the earlier record.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="models" aria-labelledby="models-title">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Your first checkpoint</p>
+          <h2 id="models-title">Choose models for this question.</h2>
+          <p class="muted">The main agent proposes concrete models available in your current environment and explains its recommendation. Choose a profile or adjust any role.</p>
+          <p class="small">Every profile keeps the same seven agents and your fact review. One model can fill all roles in separate calls. Higher usage does not guarantee a better answer.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Profiles change the model allocation, not the review method.</caption>
+            <thead><tr><th scope="col">Profile</th><th scope="col">Typical fit</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Economy</th><td>A bounded question with good evidence and lower consequences.</td></tr>
+              <tr><th scope="row">Balanced</th><td>Several plausible options or meaningful trade-offs.</td></tr>
+              <tr><th scope="row">Thorough</th><td>Difficult evidence, complex reasoning or costly consequences.</td></tr>
+            </tbody>
+          </table>
+          <p class="small" style="margin-top:16px">Usage and waiting time depend on the chosen models and host. Seven agents does not necessarily mean seven billed requests. Any replacement of an unavailable model needs your choice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="report" aria-labelledby="report-title">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Recognise the result</p>
+          <h2 id="report-title">Read the reason.<br>Keep the next check.</h2>
+          <p class="muted">The chat gives you a plain-language explanation and a link to the saved <code>report.md</code>. Use it to decide what to investigate or do next.</p>
+          <p class="notice"><strong>A complete review can be undecidable.</strong> That means the process finished, but the evidence cannot settle the question. An <strong>incomplete</strong> report means a required stage has not finished successfully.</p>
+        </div>
+        <dl class="report-list">
+          <dt>What is recommended, and why?</dt><dd>Follow the argument from the original facts to the recommendation. Agreement among agents is not proof.</dd>
+          <dt>What remains uncertain?</dt><dd>Read the missing evidence and source gaps. A complete workflow does not make incomplete evidence sufficient.</dd>
+          <dt>What would change the answer?</dt><dd>Find the concrete next check and the condition for revisiting the decision.</dd>
+          <dt>What was outside the question?</dt><dd>Keep useful observations separate from the decision actually reviewed. The report also retains the findings, sources and model record.</dd>
+        </dl>
+      </div>
+      <p class="takeaway">You have a usable result when you can explain the recommendation, its evidence, its limits and the next check. Decision Council informs your decision; it does not approve or execute changes.</p>
+    </section>
+
+    <section class="section" id="help" aria-labelledby="help-title">
+      <div class="split">
+        <div><p class="eyebrow">When you need it</p><h2 id="help-title">Questions and help</h2><p class="muted">Keep the saved report when something stops. It records completed work and the remaining issue.</p></div>
+        <div>
+          <details id="help-start">
+            <summary>The instructions are not loaded, or independent roles cannot run.</summary>
+            <div class="detail"><p>Ask the main agent to read SKILL.md and identify any missing file execution, independent-context or explicit-model-selection capability. Use only a verified supported execution route.</p><p>The host must support separate agent contexts and an actual way to select their models. Decision Council should explain the limitation before starting. The <a href="references/execution-binding.md">execution reference</a> describes the checks.</p></div>
+          </details>
+          <details id="help-failure">
+            <summary>A model or agent fails. Can I continue?</summary>
+            <div class="detail"><p>Ask the main agent to resume the saved run. Completed work is retained, and the failed role gets at most one retry. If its model is unavailable, choose a replacement when asked; other roles keep their models.</p><p>If the role still cannot finish, Decision Council returns the incomplete report and the concrete issue. A worker that validly reports “no finding” is different from a failed or missing worker.</p></div>
+          </details>
+          <details id="help-revise">
+            <summary>I disagree with the recommendation.</summary>
+            <div class="detail"><p>Give a specific critique. You can request one revision by the chair using the existing facts and findings. The earlier report is preserved; this revision has one attempt.</p><p>New evidence or a changed question needs a new review. Do not treat a chair revision as a fresh analysis of information the earlier agents never saw.</p></div>
+          </details>
+          <details id="files">
+            <summary>Where are my files, and what does Decision Council remember?</summary>
+            <div class="detail">
+              <p>Your chosen personal folder contains:</p>
+              <pre><code>Your Decision Council folder/
+  runs/&lt;run-id&gt;/report.md    Report and supporting run files
+  council_kb.md              Confirmed improvements to the method</code></pre>
+              <p>After a review, Decision Council may offer an optional reflection on how it worked. Its personal knowledge file keeps only method improvements you supply or confirm—for example, “Explain missing source access before asking me to accept the facts.”</p>
+              <p>Findings, verdicts, ticket content and project knowledge stay in the run files. Updating the skill preserves your personal files; they are separate from the distributed folder.</p>
+              <p class="small">The remembered location is stored in <code>~/.config/council/location.json</code> on macOS/Linux or <code>%APPDATA%/council/location.json</code> on Windows.</p>
+            </div>
+          </details>
+          <details id="sharing">
+            <summary>How do colleagues get Decision Council?</summary>
+            <div class="detail"><p>Keep the complete <code>decision-council</code> folder together and retain the MIT license and required notices. Each user checks capabilities as above and chooses their own report folder. See <a href="LICENSE">LICENSE</a> for redistribution terms. Keep personal reports, source packets and model preferences outside the shared skill and Git repositories.</p><p>This guide works offline. Running Decision Council uses the model access provided by the execution environment. The local coordinator requires no additional model API key, Python packages or background service.</p></div>
+          </details>
+          <details id="limits">
+            <summary>What has been verified, and what are the limits?</summary>
+            <div class="detail"><p>The coordinator has behavior tests using simulated agent responses. They check workflow and saved state. They do not prove that a cited claim is true or that a recommendation is correct.</p><p>A real run on the intended execution environment—including skill discovery, model selection and any IssueTracker or CodeReview access—still needs verification. The guide’s example is authored, not a recording.</p><p>A selected model name is also distinct from runtime identity actually exposed by the host. The report keeps those separate. Model reputation and confident wording cannot replace evidence.</p></div>
+          </details>
+        </div>
+      </div>
+      <div class="actions"><a class="button" href="#quickstart">Start your review <span aria-hidden="true">↑</span></a><a class="text-link" href="#example">Revisit the example</a></div>
+    </section>
+  </main>
+  <footer><div class="shell"><span>Decision Council · A reusable review method</span><span><a href="SKILL.md">Skill instructions</a><a href="README.md">Package scope &amp; verification</a><a href="references/execution-binding.md">Execution reference</a></span></div></footer>
+  <script>
+    (() => {
+      const views = [...document.querySelectorAll('.view')];
+      const links = [...document.querySelectorAll('[data-view]')];
+      let activeView = 'presentation';
+      const isRoute = id => views.some(view => view.id === id);
+
+      function navigate() {
+        const id = location.hash.slice(1);
+        const target = id ? document.getElementById(id) : null;
+        const owner = target?.closest('.view');
+        if (!id) activeView = 'presentation';
+        else if (owner) activeView = owner.id;
+        views.forEach(view => { view.hidden = view.id !== activeView; });
+        links.forEach(link => {
+          if (link.dataset.view === activeView) link.setAttribute('aria-current', 'page');
+          else link.removeAttribute('aria-current');
+        });
+        if (target) {
+          let parent = target;
+          while (parent) {
+            if (parent.tagName === 'DETAILS') parent.open = true;
+            parent = parent.parentElement;
+          }
+        }
+        requestAnimationFrame(() => {
+          if (!id || isRoute(id)) window.scrollTo({ top:0, behavior:'instant' });
+          else if (target) target.scrollIntoView({ block:'start' });
+        });
+      }
+
+      window.addEventListener('hashchange', navigate);
+      // Re-selecting the current route returns to its start even when the hash stays the same.
+      links.forEach(link => link.addEventListener('click', () => {
+        if (location.hash === link.getAttribute('href')) navigate();
+      }));
+      const openBeforePrint = new Set();
+      window.addEventListener('beforeprint', () => {
+        document.querySelectorAll('details').forEach(detail => {
+          if (detail.open) openBeforePrint.add(detail);
+          detail.open = true;
+        });
+      });
+      window.addEventListener('afterprint', () => {
+        document.querySelectorAll('details').forEach(detail => { detail.open = openBeforePrint.has(detail); });
+        openBeforePrint.clear();
+      });
+      navigate();
+    })();
+  </script>
+</body>
+</html>

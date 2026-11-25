@@ -1,0 +1,88 @@
+/* The phase map is shared by the offline guide and walkthrough. */
+header p a {color:#d5efe5}
+.wrap.phase-map-wrap {padding-top:28px}
+.phase-map {padding:30px 32px;margin-bottom:0}
+.phase-map h2 {font-size:30px;margin-bottom:10px}
+.phase-map .map-intro {max-width:850px;margin-bottom:20px}
+.map-route {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:22px 0 18px}
+.map-route li {margin:0;min-width:0}
+.map-route a {display:block;height:100%;padding:16px 18px;background:#edf3f8;border:1px solid #c5d5df;border-radius:9px;text-decoration:none;color:var(--ink)}
+.map-route a:hover {border-color:var(--accent);background:#e9f4f0}
+.map-route span,.map-route strong,.map-route small {display:block}
+.map-route span {font-size:12px;color:var(--accent);font-weight:750}
+.map-route strong {font-size:18px;line-height:1.3;margin:4px 0 7px}
+.map-route small {font-size:13px;line-height:1.5;color:var(--muted)}
+.phase-map .map-guidance {font-size:14px;line-height:1.6;max-width:930px;margin:0 0 22px}
+.map-start,.map-finish {display:flex;align-items:center;gap:18px;padding:15px 20px;background:#142e3d;color:#fff;border-radius:10px}
+.map-start strong,.map-finish strong {font-size:18px;line-height:1.4}
+.map-start .map-label,.map-finish .map-label {color:#b6ded8;min-width:105px;font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:.07em}
+.map-start small,.map-finish small {display:block;color:#d8e5eb;font-size:14px;font-weight:400}
+.map-legend {display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin:19px 0 12px;font-size:13px;color:var(--muted)}
+.map-legend span {display:inline-flex;align-items:center;gap:8px}
+.map-key {display:inline-block;width:24px;height:17px;border:2px solid #006b64;border-radius:3px;background:#e9f4f0}
+.map-key.conditional {border:2px dashed #8194a2;background:#fff}
+.map-band {padding:24px 0;border-top:1px solid var(--line);scroll-margin-top:25px}
+.map-band-heading {padding:0 0 16px}
+.map-band-heading span {display:block;color:var(--accent);font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:.08em}
+.map-band-heading h3 {font-size:23px;line-height:1.3;margin:5px 0}
+.map-band-heading p {font-size:14px;line-height:1.5;margin:5px 0 0;color:var(--muted)}
+.map-phases {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start;list-style:none;padding:0;margin:0}
+.map-phases.four {grid-template-columns:repeat(2,minmax(0,1fr))}
+.map-phase {min-width:0;margin:0;padding:17px 18px;border:2px dashed #8194a2;border-radius:10px;background:#fff;overflow-wrap:anywhere}
+.map-phase.always {border:2px solid #006b64;background:#e9f4f0}
+.map-phase-top {display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:9px}
+.map-phase-number {font-size:13px;font-weight:750;color:#506574}
+.map-phase-kind {font-size:11px;line-height:1.3;color:#506574}
+.always .map-phase-kind {color:#006b64;font-weight:750}
+.map-phase h4 {font-size:19px;line-height:1.35;margin:0 0 10px}
+.map-phase p {font-size:14px;line-height:1.55;margin:0}
+.map-phase .map-benefit {margin-top:14px;padding-top:12px;border-top:1px solid #cbd6db}
+.map-phase .map-when {margin-top:12px;font-size:13px;color:var(--muted)}
+.map-benefit strong,.map-when strong {display:block;font-size:12px;color:var(--accent);margin-bottom:3px}
+.map-phase details {border:0;margin-top:10px}
+.map-phase summary {font-size:13px;padding:9px 0;line-height:1.5}
+.map-phase details p {font-size:13px;margin:4px 0 10px}
+.map-phase details .map-code {color:var(--muted);font-size:11px;margin:12px 0 0}
+.map-rule {display:block;border-top:1px solid #cbd6db;padding-top:7px;margin-top:10px;font-size:12px;line-height:1.4}
+.map-rule.stop {color:#8b342b;border-color:#ddbbb6}
+.map-rule.open {color:#775316;border-color:#d5c59e}
+.map-connector {display:flex;align-items:center;gap:10px;margin:-4px 0 8px;color:#506574;font-size:12px;line-height:1.4}
+.map-connector b {font-size:19px;font-weight:400}
+.map-evidence {display:flex;flex-wrap:wrap;align-items:center;gap:6px 13px;padding:13px 18px;margin:2px 0 16px;background:#edf2f4;border-radius:8px;font-size:13px}
+.map-evidence strong {margin-right:8px}
+.map-evidence .map-arrow {color:#506574}
+.phase-map figcaption {font-size:13px;color:var(--muted);margin-top:14px}
+.phase-map figure {margin:0}
+.map-next {display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin:18px 0 0;font-size:14px}
+.map-next a {font-weight:650}
+@media(max-width:1000px) {
+ .map-phases {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px) {
+ .wrap.phase-map-wrap {padding-top:18px}
+ .phase-map {padding:22px 18px}
+ .phase-map h2 {font-size:25px}
+ .map-route {grid-template-columns:1fr;gap:8px}
+ .map-route a {padding:12px 15px}
+ .map-start,.map-finish {display:block;padding:14px 16px}
+ .map-start .map-label,.map-finish .map-label {display:block;margin-bottom:5px}
+ .map-legend {align-items:flex-start;gap:10px 17px}
+ .map-phases,.map-phases.four {grid-template-columns:1fr;gap:23px}
+ .map-phase {padding:13px 16px}
+ .map-phase-top {margin-bottom:6px}
+ .map-phase h4 {font-size:18px}
+ .map-connector {margin-bottom:12px}
+ .map-evidence {gap:6px 9px}
+ .map-evidence strong {width:100%}
+}
+@media print {
+ .phase-map-wrap {padding:0}
+ .phase-map {padding:12px 0;break-after:page}
+ .map-start,.map-finish {background:#edf2f4;color:#162b3b}
+ .map-start .map-label,.map-finish .map-label,.map-start small,.map-finish small {color:#506574}
+ .map-phase {break-inside:avoid}
+ .map-next {display:none}
+}
+.map-return {display:flex;align-items:center;gap:15px;margin-top:16px;padding:12px 16px;border-left:3px solid #006b64;background:#e9f4f0}
+.map-return-arrow {font-size:32px;line-height:1;color:#006b64}
+.map-return p {font-size:14px;line-height:1.5;margin:0}

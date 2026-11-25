@@ -1,0 +1,66 @@
+phases:
+- id: understand
+  mandatory: true
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Inspect the problem, current implementation and project state; document any
+    preflight override.
+- id: spike
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Test the uncertain approach on relevant artifacts. INVALIDATED stops this
+    run.
+  default_reason: APPROACH_PROVEN
+- id: plan
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Record scope, non-goals and observable verification for each work item.
+  default_reason: PLAN_EXISTS
+- id: constraints
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Use a build check to demonstrate that valid output is accepted and invalid output
+    is rejected; reuse existing coverage when sufficient.
+  default_reason: NO_OUTPUT_CONTRACT
+- id: tdd
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Save the observed regression failure and passing result, then run the relevant
+    suite.
+  default_reason: NO_CODE
+- id: integration
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Exercise the active path through affected consumers and its failure handling;
+    when replacing behavior, verify that retired paths cannot be re-entered.
+  default_reason: NO_INTEGRATION_POINT
+- id: cron
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Verify the requested schedule and an actual first-run artifact within authorized
+    scope.
+  default_reason: NO_RECURRING_STEP
+- id: doc
+  mandatory: false
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Update the affected canonical documentation to describe current behavior.
+  default_reason: NO_CANONICAL_DOC
+- id: verify
+  mandatory: true
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Run meaningful checks, including a direct check against the actual changed
+    artifacts; measure that total governance LOC does not exceed product LOC.
+- id: postmortem
+  mandatory: true
+  delegate: host-agent
+  gate_impl: validate_receipt.py
+  gate: Record outcome, gaps and cleanup, including obsolete controls removed. Method improvements
+    are optional.

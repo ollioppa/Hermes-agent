@@ -14,7 +14,7 @@ No standalone LICENSE, LICENCE, COPYRIGHT or NOTICE file was found in the inspec
 
 Roland Chotika explicitly authorized the MIT license for this export; see LICENSE. This is a specific decision for Documentation Guide, not an inferred license from another project. It grants the rights the licensor can grant; third-party rights and required notices remain unaffected.
 
-The license decision does not authorize an upload or publication. The combined release still requires separate approval of its concrete contents. No employer ownership or export ban is inferred from a source folder name.
+The license and publication decisions were separate: publication of these sanitized contents as part of the combined collection was explicitly authorized. No employer ownership or export ban is inferred from a source folder name.
 
 ## Source fingerprints
 
