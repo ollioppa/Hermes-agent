@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="310" viewBox="0 0 800 310" role="img" aria-labelledby="title desc">
+<title id="title">Choose a problem, then a project</title><desc id="desc">For development work: Project Discovery clarifies, Decision Council challenges and Delivery Workflow delivers. Handoffs are human-guided. For market work: Market Data Collector produces snapshots; Opportunity Radar supports research. These are separate projects. Documentation Guide explains work in either area.</desc>
+<rect width="800" height="310" rx="16" fill="#101827"/>
+<g font-family="Arial, sans-serif" fill="#f3f6fc">
+<text x="24" y="34" font-size="20" font-weight="bold">From question to delivered change</text>
+<g fill="#20334b" stroke="#7dbaff"><rect x="24" y="52" width="225" height="64" rx="8"/><rect x="287" y="52" width="225" height="64" rx="8"/><rect x="550" y="52" width="225" height="64" rx="8"/></g>
+<g font-size="18" text-anchor="middle"><text x="136" y="78">Project Discovery</text><text x="399" y="78">Decision Council</text><text x="662" y="78">Delivery Workflow</text></g>
+<g font-size="15" fill="#cbd8e8" text-anchor="middle"><text x="136" y="101">Clarify → saved handoff</text><text x="399" y="101">Challenge → verdict</text><text x="662" y="101">Implement → checked handover</text></g>
+<g font-size="24"><text x="257" y="91">→</text><text x="520" y="91">→</text></g>
+<text x="24" y="139" font-size="14" fill="#cbd8e8">Human-guided handoffs, not an automated pipeline</text>
+<text x="24" y="174" font-size="20" font-weight="bold">Market data and research — separate tools</text>
+<g fill="#20334b" stroke="#7dbaff"><rect x="24" y="190" width="360" height="50" rx="8"/><rect x="414" y="190" width="361" height="50" rx="8"/></g>
+<g font-size="17" text-anchor="middle"><text x="204" y="221">Market Data Collector → snapshots</text><text x="594" y="221">Opportunity Radar → research proposals</text></g>
+<text x="24" y="279" font-size="18">Documentation Guide: make the result understandable in either area</text>
+</g></svg>
