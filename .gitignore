@@ -11,3 +11,21 @@ __pycache__/
 *.db
 *.log
 .DS_Store
+
+# Private runtime artifacts (root invocation and Radar project invocation).
+/state/
+/output/
+/research/
+/mail-attempts/
+/opportunity-radar/state/
+/opportunity-radar/output/
+/opportunity-radar/research/
+/opportunity-radar/mail-attempts/
+/opportunity-radar/demo-output/
+# Mail attempts can also live beside a custom database path.
+*.pending
+# Common credential files; configure real credentials outside the checkout.
+credentials.json
+service-account*.json
+*.pem
+*.key

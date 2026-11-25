@@ -30,6 +30,8 @@ Prepare the private task using [the template](references/task-template.md). Audi
 
 ## Safety and limits
 
+The standalone `generate_manifest.py` helper also requires an output location outside every Git ancestor and the distributed package. It creates a new manifest with owner-only permissions and refuses existing destinations or output symlinks; choose a new filename instead of overwriting private evidence.
+
 `configure`, `audit`, `record` and `check` write private state. **`check --dry-run` also writes**; it is a compatibility option, not a write-free preview. The coordinator does not commit, push, deploy, schedule or communicate externally. These actions require their own authorization. A required independent review must be performed by an actual separate reviewer, not inferred from `check`.
 
 Structural evidence validation is not proof of source truth, semantic correctness, actual command execution or publication. Keep missing host/live checks open. A recipient-host pilot is required before claiming compatibility; Python portability alone is not universal harness or operating-system support. No full successful end-to-end run is claimed for this export.

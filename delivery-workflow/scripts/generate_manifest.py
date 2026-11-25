@@ -106,8 +106,16 @@ def build_manifest(task_ref: str, frontmatter: dict,
 
 def write_manifest(manifest: dict, output_path: Path) -> None:
     import yaml
-    with open(output_path, "w", encoding="utf-8") as f:
-        yaml.dump(manifest, f, default_flow_style=False, allow_unicode=True)
+    from storage import private_path
+    output_path = Path(output_path).expanduser()
+    if output_path.is_symlink():
+        raise ValueError("Manifest destination must not be a symlink")
+    output_path = private_path(output_path)
+    content = yaml.safe_dump(manifest, default_flow_style=False, allow_unicode=True)
+    # Exclusive creation refuses existing files and restricts private path metadata.
+    fd = os.open(output_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    with os.fdopen(fd, "w", encoding="utf-8") as f:
+        f.write(content)
     print(f"  Manifest: {output_path}")
     print(f"  Phases:   {len(manifest['phases'])} — "
           f"{sum(1 for p in manifest['phases'] if p['decision'] == 'included')} included")
@@ -127,7 +135,7 @@ def main() -> int:
     output_path = None
     for i, arg in enumerate(sys.argv[2:], start=2):
         if arg == "--output" and i + 1 < len(sys.argv):
-            output_path = Path(sys.argv[i + 1]).expanduser().resolve()
+            output_path = Path(sys.argv[i + 1]).expanduser()
         elif arg == "--no-default-include":
             include_all = False
 
