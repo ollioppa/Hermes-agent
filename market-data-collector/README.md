@@ -1,5 +1,7 @@
 # Market Data Collector
 
+[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+
 Created by Roland Chotika with AI assistance.
 
 **Marktdaten sammeln, Kennzahlen berechnen und aus Google Sheets einen strukturierten Snapshot lesen.** Enthalten ist die bestehende BTC-/MSTR-, Markt-/Sektor- und optionale Macro-Pipeline, keine neue Beispielarchitektur. Der lokale Einstieg verwendet ausschließlich synthetische Daten und benötigt keine Konten.

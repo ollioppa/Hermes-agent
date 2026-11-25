@@ -1,5 +1,7 @@
 # Opportunity Radar
 
+[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+
 Created by Roland Chotika with AI assistance.
 
 **Portables Agentenprojekt mit lokal enthaltenen Fachverfahren; als bereinigter Export veröffentlicht.** Der Radar verbindet LLM-gestütztes Aktien-/ETF-Research mit einem deterministischen SQLite-Kern. Er trennt recherchierte Vorschläge, menschlich aufgenommene Chancen und bestätigte Positionen. Eine Empfehlung bucht keinen Trade.

@@ -14,6 +14,14 @@ Six practical projects by Roland Chotika, developed with AI assistance and publi
 
 The three workflow projects can be used in sequence: **Discovery → Council → Delivery**, or independently. Each requires the capabilities described in its README; private run artifacts must stay outside this repository.
 
+## Read and explore
+
+Each project README links to its user guide and self-contained source walkthrough. Download/open `walkthrough.html` in a browser: GitHub's file view shows the HTML source rather than running the interactive page. The atlas preserves the shared renderer's German navigation labels; project explanations and guides are English.
+
+The walkthroughs explain the published source snapshot, not a recorded live execution. Their maps distinguish code calls, saved-artifact handoffs, human decisions and work performed by the agent host. Use the user guide to begin; use the walkthrough for technical depth.
+
+For the development workflow, start with **Discovery** when the question is unclear, use **Council** when a consequential choice needs independent challenge, and use **Delivery** for authorized implementation and verification. These are human-guided handoffs, not an automatic pipeline; a Council recommendation does not authorize a deployment.
+
 ## Get started
 
 ```sh

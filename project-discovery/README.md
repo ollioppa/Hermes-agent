@@ -1,5 +1,7 @@
 # Project Discovery
 
+[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+
 Created by Roland Chotika with AI assistance.
 
 Clarify an uncertain question, task or spike before committing to work. Adaptive questions turn supplied evidence and user answers into a saved answer or actionable handoff—not an unsolicited implementation project.
@@ -32,7 +34,7 @@ Runtime instructions: `SKILL.md`, `kb/discovery_kb.md`, `references/question-pla
 
 Runtime helper: `scripts/storage.py`.
 
-Supporting material: `LICENSE`, `README.md`, `tests/test_storage.py`.
+Supporting material: `GUIDE.md`, `walkthrough.html`, `walkthrough.json`, `LICENSE`, `README.md`, `tests/test_storage.py`.
 
 No case reports, private KB, credentials, historical runs or private maintenance plans belong in the package. The shared KB is generic guidance; user learning stays private. Existing `discovery-agent/location.json`, `discovery_kb.md`, `DISCOVERY_…` and CLI arguments are deliberately retained as compatible technical names, not installation claims.
 

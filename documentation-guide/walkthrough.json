@@ -1,0 +1,615 @@
+{
+  "kind": "complete-walkthrough",
+  "version": 2,
+  "title": "documentation-guide — source-bound walkthrough",
+  "product_contract": "An instruction-based editorial method, not a software runtime. Text authorities shown in DEV are verbatim documents, not functions.",
+  "authority": "documentation-guide/LICENSE SHA256 5b4841ac7396cd5a7dbeb10f716f0b771744e644c1af8bc0773a76dc23c5054a; documentation-guide/METHOD.md SHA256 51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3; documentation-guide/PROVENANCE.md SHA256 1d4745e8eb46855a9d26a9a90b0d6f666c50d28cc5d0e98600c8d78b8a462b4f; documentation-guide/README.md SHA256 1dd1bd924f52bb28a831ee9d476421c3ae37305587cc9c518f9b17d6ae03e74b; documentation-guide/REFERENCE.md SHA256 0ca4e451c3af6bc955f25bce1474f2b61870d4ab714407e1ce3127e3e2e625bf; documentation-guide/START-HERE.html SHA256 630951b2bedffb5bcbdfed5eb9662ad45df537cbe169ea8151f5ef3228efb15a; documentation-guide/example.md SHA256 365f53f44248fee621f930e8528f43da5a823a06c8c1bf596a69130d3ec505cd",
+  "side_effect_boundary": "Read-only clean repository inspection. No target execution, production writes, LLM calls, installation or publication. Only documentation artifacts generated.",
+  "target_commit": "ddac35ef8362d1f93356142ca7f651888f2146e5",
+  "scenario": {
+    "run_id": "documentation-guide-source-only-ddac35e",
+    "boundary": "No target run observed; source-only semantic curation. Commit and file hashes checked."
+  },
+  "stages": [
+    {
+      "id": "assignment",
+      "title": "Establish the assignment",
+      "purpose": "Read sources, draft and prior decisions; establish reader, starting state, outcome, language and destination. Explain supported value against a fair alternative.",
+      "handoff": "Resolve material gaps within permission; maintain one existing baseline.",
+      "artifact": "Source-bound assignment",
+      "values": [
+        "documentation-guide/METHOD.md:5-13"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/METHOD.md:text:1-14",
+          "stage_id": "assignment",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/METHOD.md:1-14 (not a function)",
+          "file": "documentation-guide/METHOD.md",
+          "line": 1,
+          "end_line": 14,
+          "code": "# Documentation Guide — method\n\n**Readable for humans.** Apply this instruction-based method in the writing step you already use. No special assistant, installation, renderer or additional agent is required. Maintained method files are English; documents use the readers' agreed language. [REFERENCE.md](REFERENCE.md) explains the preservation decisions for maintenance, not mandatory reading for every edit. Start with [README.md](README.md).\n\n## Establish the assignment\n\nRead the request, authoritative subject sources/design, current document and prior decisions. Establish readers, primary starting state, outcome, language and destination; reuse known answers. Extract purpose, mechanisms, alternatives and limits before choosing an example. Distinguish intended design, implemented behavior and observed results. Do not invent superiority, uniqueness or measured savings.\n\nFor an adoption guide, explain the specific contribution compared with the familiar alternative, including when that alternative is sufficient. The reason must stand without the example. An example cannot redefine the subject's primary scope. For a how-to, establish the task and result; an adoption pitch is unnecessary.\n\nIf a material gap remains, use the assignment's available research tools within their permissions or ask focused questions. An optional discovery helper must follow its own data-handling and report requirements; it is never a prerequisite. Do not expose private source material in shared documentation. Continue independent work while the affected explanation waits. Small corrections reuse established context rather than restarting discovery.\n\nKeep a short baseline in the existing authoritative project design or associated maintenance page: reader/outcome, supported value and sources, required content and purpose, reading paths, medium/language/viewport, decisions and open checks. Do not create a competing registry.\n",
+          "source_sha256": "51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    },
+    {
+      "id": "paths",
+      "title": "Choose reader paths",
+      "purpose": "Quickstart supports action; Presentation explains why. Use both only when both reader needs exist. Introductory entries require useful graphic, plain language and direction.",
+      "handoff": "Obtain feedback for substantial unapproved redesign before expanding.",
+      "artifact": "Chosen paths and destination requirements",
+      "values": [
+        "documentation-guide/METHOD.md:15-28"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/METHOD.md:text:15-29",
+          "stage_id": "paths",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/METHOD.md:15-29 (not a function)",
+          "file": "documentation-guide/METHOD.md",
+          "line": 15,
+          "end_line": 29,
+          "code": "## Choose and draft the reader paths\n\nWhen both first understanding and repeat use matter, provide directly accessible, consistent paths sharing setup and technical facts:\n\n- **Quickstart:** brief bullet answers to purpose, specific value, fit, prerequisites, first action and expected result. No story before the action.\n- **Presentation:** connected introduction, explanation and useful ending. Explain purpose and relevant difference before examples; lead directly to the quickstart.\n\nA focused how-to or lookup can use one path. Presentation need not mean slides. Assess entries as a newcomer with sound judgment and little subject knowledge, without condescension.\n\nIntroductory entries require four things together: a useful small graphic, plain language, benefit/graphic/next step in one readable first view, and clear reader direction. A pure lookup may omit a graphic or narrative that adds no orientation; this exception does not waive the introductory requirements.\n\nCheck overload, condescension/boredom and direction before expanding. For adoption guides, remove the example temporarily and check that the specific value still stands. Repair weak entries first. For a substantial redesign, show concrete entry drafts and obtain feedback; an already approved direction or a small requested edit needs no new approval round.\n\nUse the actual destination viewport, provisionally 1366 × 768 at 100% zoom for browser guides. Include surrounding wiki or application navigation. Check mobile when required; never shrink text or hide essentials to force a fit. A source or desktop check is not evidence of fit in another viewer.\n",
+          "source_sha256": "51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    },
+    {
+      "id": "revise",
+      "title": "Develop and preserve meaning",
+      "purpose": "Put prerequisites before actions; connect action with result and recovery. Preserve decision meaning, prominence and location—not just keywords.",
+      "handoff": "Record dispositions in existing baseline and check unaffected material.",
+      "artifact": "Revised document with preserved decisions",
+      "values": [
+        "documentation-guide/METHOD.md:30-36",
+        "documentation-guide/REFERENCE.md:7-21"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/METHOD.md:text:30-37",
+          "stage_id": "revise",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/METHOD.md:30-37 (not a function)",
+          "file": "documentation-guide/METHOD.md",
+          "line": 30,
+          "end_line": 37,
+          "code": "## Develop or revise\n\nConnect explanation/action to expected result. Introduce prerequisites and material warnings before use, explain necessary terms, provide recovery for common failures and end by fulfilling the opening promise. Keep deeper sections understandable. Use short connected paragraphs, lists for steps and tables for comparisons. Remove filler.\n\nFor revisions, identify affected decisions before editing. Preserve their **meaning, prominence and location in the needed reader path**, not just keywords. A shortened introductory quickstart retains its brief purpose/value answer in that quickstart. Unchanged requirements still apply. Afterwards record each affected decision's disposition, destination and actual check in the existing baseline; check for accidental loss elsewhere. Resolve genuine conflicts before dropping requirements.\n\nUse destination-supported graphics with readable labels and text equivalents; color alone cannot carry meaning. Preserve promised offline use. Moving between HTML, Markdown and wikis preserves purpose and navigation, not a fixed template. Unsupported diagram syntax is not a rendered graphic.\n",
+          "source_sha256": "51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        },
+        {
+          "id": "documentation-guide/REFERENCE.md:text:1-52",
+          "stage_id": "revise",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/REFERENCE.md:1-52 (not a function)",
+          "file": "documentation-guide/REFERENCE.md",
+          "line": 1,
+          "end_line": 52,
+          "code": "# Method reference and preservation decisions\n\nThis is a generic extraction of the original method's design, not its private history or a new framework. [METHOD.md](METHOD.md) is sufficient for normal use. This reference explains the original HG decision labels so maintenance does not require upstream files.\n\n## The decisions\n\n| ID | Meaning retained in this export | Where to check |\n| --- | --- | --- |\n| HG-01 | Readable for humans, including deeper sections. | METHOD: Develop or revise; actual reader journey. |\n| HG-02 | Little assumed subject vocabulary, sound judgment; no condescension. | METHOD: Choose and draft. |\n| HG-03 | Useful graphic, plain language, one readable first view and direction together for introductory entries. | METHOD: Choose and draft; rendered entry, not just markup. |\n| HG-04 | Presentation connects introduction, body and useful ending; repair the entry before expanding. | METHOD: Choose and draft; Develop or revise. |\n| HG-05 | Establish specific value against a fair alternative before the example; retain the brief answer in Quickstart. | METHOD: Establish; revision rule. |\n| HG-06 | Source-first context; targeted discovery for material gaps only. | METHOD: Establish. Generic available tools/questions replace optional host-specific discovery routing. |\n| HG-07 | Preserve meaning, prominence and location; record dispositions and actual checks. | METHOD: Develop or revise. |\n| HG-08 | English maintained method; agreed language for generated output. | METHOD opening. |\n| HG-09 | HTML, Markdown and wikis supported without a compulsory renderer. | METHOD: Develop or revise. |\n| HG-10 | Direct Quickstart and Presentation when both reader needs exist; shared facts/setup. | METHOD: Choose and draft. |\n| HG-11 | An example cannot redefine primary purpose, starting state or outcome. | METHOD: Establish. Private project illustration omitted, rule preserved. |\n| HG-12 | Focused how-to/lookup may use one path; lookup exception does not waive introductory requirements. | METHOD: Choose and draft. |\n| HG-13 | Design, implementation and observed evidence differ; checks establish only their actual scope. | METHOD: Establish; Check and deliver. |\n\n## Establish supported value without a sales pitch\n\nRead the authoritative subject design and relevant evidence, including reasons for decisions and alternatives. Trace reader situation → limitation of the familiar approach → specific mechanism → useful outcome. A design states intent; an implementation shows what exists; an exercised check supports only what it observed. If they conflict, mark the gap before using the claim.\n\nThe fair alternative may be sufficient. Do not manufacture exclusivity or measured time savings. Remove the example temporarily: if the reason to use the subject disappears, the explanation is not yet grounded. A how-to needs a clear task and outcome instead of an adoption argument.\n\n## Keep one short documentation baseline\n\nUse the existing project design or clearly associated maintenance page. Record:\n\n- reader, knowledge, primary starting state, goal and prerequisites;\n- supported purpose/value, source references, alternatives and limits;\n- required content and why it matters;\n- reader paths and shared detail destinations;\n- language, medium, actual review viewport and success criteria;\n- binding decisions, their source, intended prominence, current location and open checks.\n\nBefore an edit read request, baseline and current document together. The current text alone does not prove all earlier decisions survived. For each affected decision record **preserved, rephrased, moved or deliberately replaced**, its new location and what was actually checked. Inspect unaffected content for accidental losses. Resolve conflicts before silently dropping requirements. This is an update to existing maintenance, not a new registry or per-message ceremony.\n\n## Reader paths and visual checks\n\nQuickstart supplies short answers and immediate action. Presentation explains purpose and relevant difference, develops the reasoning and fulfills the opening promise. A returning reader must not replay the explanation to act. Shortening Quickstart can move detailed setup behind a direct link; it cannot move its agreed brief purpose/value answer entirely into Presentation.\n\nFor introductory entries check benefit, graphic, next step and readable language together at the actual viewport. Ask whether the entry overloads the reader, explains the obvious or leaves direction unclear. Early feedback is for substantial unapproved redesign, not every small correction. The provisional browser viewport is 1366 × 768 at 100% zoom; include surrounding host UI. Mobile checking is a separate obligation when required. A Markdown source has no universal pixel layout.\n\nA graphic explains a useful relation, uses readable labels and has a text equivalent. Do not rely on unsupported interactive elements or raw diagram syntax. A focused lookup can omit ornamental graphics and narrative. These boundaries retain the method's existing distinctions rather than applying every rule to every reply.\n\n## Honest handover\n\nFollow actionable instructions and inspect the intended destination where possible. Report actual checks and remaining ones. A valid link does not prove good explanation; a local browser does not prove wiki publication; an author-run task does not prove newcomer comprehension. Access and publication permissions are separate. No automatic quality score, extra reviewer fleet or new execution system is required.",
+          "source_sha256": "0ca4e451c3af6bc955f25bce1474f2b61870d4ab714407e1ce3127e3e2e625bf",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    },
+    {
+      "id": "check",
+      "title": "Check and deliver honestly",
+      "purpose": "Inspect destination and follow actionable steps where possible. Local checks do not prove reader success or publication.",
+      "handoff": "Deliver artifact plus actual checks and open points; publication needs authorization.",
+      "artifact": "Document and honest handover",
+      "values": [
+        "documentation-guide/METHOD.md:38-42"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/METHOD.md:text:38-42",
+          "stage_id": "check",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/METHOD.md:38-42 (not a function)",
+          "file": "documentation-guide/METHOD.md",
+          "line": 38,
+          "end_line": 42,
+          "code": "## Check and deliver\n\nReview the affected reader journey, setup, links, examples, shared facts and success signs. Inspect the actual destination and follow actionable instructions where possible. For a substantial guide, an available native reviewer may check supplied decisions and return omissions with locations and concrete repairs. Keep that optional review read-only and bounded, without further delegation. Small edits need no helper.\n\nUpdate the baseline and hand over the artifact, actual checks and open points. Check destination access before publishing; an inaccessible destination gets a transferable draft with the remaining check stated. Publication requires authorization. Local structure checks do not prove readability, publication or newcomer success. Use enough checking for the changed work; no mandatory phase system, scoring program or review loop.",
+          "source_sha256": "51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    },
+    {
+      "id": "example",
+      "title": "Inspect the labelled teaching example",
+      "purpose": "Source facts, weak Before, After and preservation table demonstrate source-first repair. It is a newly constructed exercise, not a historical case.",
+      "handoff": "Compare meanings and position, not identical wording; keep command-check claims attributed.",
+      "artifact": "Illustrative line-counting how-to, not an observed run here",
+      "values": [
+        "documentation-guide/example.md:3-15,43-57"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/example.md:text:1-57",
+          "stage_id": "example",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/example.md:1-57 (not a function)",
+          "file": "documentation-guide/example.md",
+          "line": 1,
+          "end_line": 57,
+          "code": "# New illustrative example: count lines without changing a file\n\n**Created for this export.** The source facts, weak Before text and After text below are a newly constructed teaching example. They are not private documents, a historical application, a controlled comparison or evidence that another reader succeeded. The command was executed locally: three lines returned 3, an empty file returned 0, and a final newline did not add a line. This is a command check, not an independent reader study.\n\n## Source facts and assignment\n\n- Reader: someone comfortable opening a terminal, unfamiliar with Python line counting.\n- Task: count all lines in a UTF-8 text file without changing it. Blank lines count. A final line without a newline counts too. This is not a count of words, records or nonempty lines.\n- Environment: Python 3 available as `python3`; a terminal opened in the directory containing `sample.txt`.\n- Fixture: `sample.txt` contains exactly `apple\\n\\npear`, where `\\n` means a newline character. This is three lines, with no final newline.\n- Implementation: `Path.read_text(encoding='utf-8').splitlines()` reads and splits text; `len(...)` counts the resulting lines. An empty file yields zero. The command loads the file in memory; this guide is not for very large files.\n- Boundaries: no write operation in the counting command; missing file and invalid UTF-8 need explicit recovery. Do not silently ignore decoding errors or overwrite the input.\n- Requested output: a compact English how-to. One action path is sufficient; no adoption claim or second presentation is needed.\n\nThese are the complete source facts for the exercise, not claims about a separate product. The preservation baseline is the table below.\n\n## Before — deliberately weak draft\n\nUse Python to inspect your content. Run the line counter on the input and check the count. If it fails, fix the file and try again. This makes processing easy.\n\n## After — method applied\n\n### Count every line in a small text file\n\nThis command counts lines, including blank ones, without changing your file. It also counts a final line without a trailing newline. It does not count words or nonempty records.\n\n**Before starting:** use a small UTF-8 file named `sample.txt`, have Python 3 available as `python3`, and open a terminal in the folder containing the file. The command reads the whole file into memory, so choose another approach for very large files.\n\nFor the practice input, use a text editor to create `sample.txt` in a new practice folder. Enter `apple` on line one, leave line two blank, and enter `pear` on line three. A final newline is optional for this count. Save as UTF-8. Use a new file; do not replace existing work.\n\nRun in that folder:\n\n```sh\npython3 -c \"from pathlib import Path; print(len(Path('sample.txt').read_text(encoding='utf-8').splitlines()))\"\n```\n\nFor the practice input, expect `3`. The blank middle line is included. For your own file, the result depends on its contents; `3` is not a universal success value. The command contains no write operation.\n\nIf `python3` is not found, use a system with Python 3 installed before retrying. If you see `FileNotFoundError`, check the terminal's folder and exact filename. If you see `UnicodeDecodeError`, stop and verify the source encoding; work on a UTF-8 copy rather than discarding characters or overwriting the original.\n\nYou now have a line count with its meaning defined. Keep the input unchanged; a different count is a reason to inspect its lines, not to alter them until the expected number appears.\n\n## Decision preservation and own quality review\n\nThe Before text omits essential facts; recovering them from the supplied factbase is not evidence that they were present in the draft. The actual editorial application here is source-first repair, not just polishing its sentences.\n\n| Decision from the factbase | Disposition and After location | Own check / limit |\n| --- | --- | --- |\n| Count all lines, including blank and unterminated final line | Restored explicitly in opening and expected result | Fixture and empty-file command checks; no claim about all possible file formats. |\n| Do not modify input | Preserved from source; opening, command and ending | Local execution compared input bytes before/after. |\n| Python 3, UTF-8, correct folder/name | Restored before action | Tested in a fresh local directory; recipient installation not tested. |\n| Small files only | Restored before action | Command reads entire text; no memory benchmark claimed. |\n| Exact action and success sign | Replaced vague instruction with command and conditional `3` | Real local fixture result recorded separately. |\n| Recover without corrupting source | Replaced vague “fix the file” with named error handling | Missing-file and decoding-error cases exercised locally. |\n| Compact focused how-to | Single path retained; filler removed | Own editorial review, not a reader study. |\n\nFor an additional revision, ask to shorten the After while retaining these decisions. Check their meaning and position, not just whether “UTF-8” or “3” still appears somewhere. The generic method's Quickstart/Presentation distinction remains intact even though this narrowly scoped example legitimately needs one path.",
+          "source_sha256": "365f53f44248fee621f930e8528f43da5a823a06c8c1bf596a69130d3ec505cd",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    },
+    {
+      "id": "entry",
+      "title": "Use the existing entry and rights boundary",
+      "purpose": "README and START-HERE already provide purpose, fit, starter request, expected outcome and recovery. Keep them as canonical user entry.",
+      "handoff": "Attach METHOD and example to an authorized AI chat, or apply to own sources. No special installation.",
+      "artifact": "Existing reader paths, provenance and license",
+      "values": [
+        "documentation-guide/README.md:7-33",
+        "documentation-guide/START-HERE.html:9-30"
+      ],
+      "source_units": [
+        {
+          "id": "documentation-guide/README.md:text:1-51",
+          "stage_id": "entry",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/README.md:1-51 (not a function)",
+          "file": "documentation-guide/README.md",
+          "line": 1,
+          "end_line": 51,
+          "code": "# Documentation Guide\n\nCreated by Roland Chotika with AI assistance.\n\n[Quickstart](#quickstart) · [Presentation](#presentation) · [Offline visual entry](START-HERE.html)\n\n## Quickstart\n\n- **What:** reusable instructions for writing or revising guides from sources.\n- **Why:** keep agreed meaning and its place in the reader's path through later edits—not merely the same keywords.\n- **Fit:** maintained guides, start pages and how-tos. A normal prompt is enough for a sentence correction.\n- **Need:** an AI tool that accepts pasted text or attachments, source material you may share, and a place to save the answer. No special assistant or installation.\n\n```text\nSources + reader's goal\n          ↓\nShared facts and decisions\n      ↙             ↘\nQuickstart      Presentation\n act now       understand why\n      ↘             ↙\n Revisions preserve meaning\n```\n\n**Start:** attach or paste [METHOD.md](METHOD.md) and [example.md](example.md) into a new chat, then send:\n\n> Apply METHOD.md to the Source facts, assignment and Before text in example.md. Produce a clearer English how-to and a concise decision-preservation check. Use only those facts; ignore the provided After and review until you have drafted your answer. Do not publish or modify files. Distinguish checks you actually performed from checks still needed.\n\n**Expect:** a how-to with prerequisites, exact action, expected result and recovery, plus a check against the source facts. Compare your answer with the labelled example; identical wording is not required. This is a runnable chat assignment, not a special slash command. Do not paste private material into a service unless its use is authorized.\n\nIf attachments are unavailable, open the files in a text editor and paste their contents with filename labels. If the assistant cannot execute commands, it must label the command check unperformed; you can run the example locally or leave it open. If it cannot read the input, stop the affected rewrite and supply the missing text rather than asking it to infer facts.\n\nFor your own document, provide METHOD.md, your sources, the current draft if any and prior decisions. State the reader, task, output language and destination. Ask for two paths only when both first understanding and repeat use are needed. Save agreed decisions alongside the maintained document, not just in a disposable chat.\n\n## Presentation\n\nReadable sentences can still lose what a reader needs. Shortening a guide may remove its reason to exist, move a prerequisite after the action, or hide an essential answer in an optional explanation. Documentation Guide connects writing to source material and keeps those decisions available for the next revision.\n\nIts specific contribution is a reusable editorial discipline: establish the subject and supported value first, select appropriate reader paths, then check that changes preserve meaning, importance and location. A capable assistant can do the same from a detailed prompt. This package organizes those instructions; it does not add model capabilities or establish measured savings.\n\nThe diagram above shows why Quickstart and Presentation share facts. The first serves immediate action, the second explains why and how. They are not duplicate manuals, and a focused how-to can use one path. [METHOD.md](METHOD.md) is the operational instruction; [REFERENCE.md](REFERENCE.md) explains the decisions behind it.\n\nThe [new illustrative example](example.md) shows the method applied to an offline line-counting how-to: source facts, a deliberately weak draft, a revised version and a preservation check are all inspectable. It is not a recovered historical case or an independent user experiment.\n\nStart with the [Quickstart](#quickstart), then judge the actual answer: can a reader see the task, take the first action and recognize success without guessing? Automated checks and the author's own review do not establish that a new reader has understood it. Check the resulting guide in its actual destination and, when required, observe the intended reader completing the task.\n\n## Scope and package status\n\nThe files are offline-readable; using an online AI service is separate. Browser layout is provided by START-HERE.html, not guaranteed for every Markdown renderer. Wiki publishing, automatic skill discovery and recipient-side AI execution are not bundled integrations.\n\nThis sanitized export is **published as part of the project collection**. Rights and redistribution remain subject to [PROVENANCE.md](PROVENANCE.md); MIT has been explicitly authorized for this export; see [LICENSE](LICENSE). The package contains README.md, METHOD.md, REFERENCE.md, START-HERE.html, example.md PROVENANCE.md and LICENSE. Internal review records are not included. Do not infer an open-source license from another component of a combined package.",
+          "source_sha256": "1dd1bd924f52bb28a831ee9d476421c3ae37305587cc9c518f9b17d6ae03e74b",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        },
+        {
+          "id": "documentation-guide/START-HERE.html:text:1-32",
+          "stage_id": "entry",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/START-HERE.html:1-32 (not a function)",
+          "file": "documentation-guide/START-HERE.html",
+          "line": 1,
+          "end_line": 32,
+          "code": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Documentation Guide</title>\n<style>\n*{box-sizing:border-box}body{margin:0;color:#182e35;background:#fafbf9;font:18px/1.5 system-ui,sans-serif}main{max-width:920px;margin:auto;padding:22px}nav{display:flex;gap:22px;flex-wrap:wrap}a{color:#145c70}h1{font-size:32px;line-height:1.2;margin:18px 0}h2{font-size:26px;line-height:1.2}section{padding-bottom:36px;scroll-margin-top:16px}li{margin:6px 0}figure{margin:16px 0;padding:12px;border:1px solid #617c85;background:#eef4f3;text-align:center}figcaption{font-size:16px}pre{white-space:pre-wrap;font:inherit;margin:0}p{margin:12px 0}.action{font-weight:650}footer{border-top:1px solid #aaa;padding-top:16px}a:focus-visible{outline:3px solid #145c70;outline-offset:3px}@media(max-width:500px){body{font-size:17px}main{padding:16px}h1{font-size:28px}nav{gap:16px}}\n</style></head>\n<body><main>\n<nav aria-label=\"Reader paths\"><a href=\"#quickstart\">Quickstart</a><a href=\"#presentation\">Presentation</a><a href=\"README.md\">Full instructions</a></nav>\n<section id=\"quickstart\"><h1>Documentation Guide</h1>\n<ul><li><strong>What:</strong> instructions for source-grounded guides.</li><li><strong>Why:</strong> preserve agreed meaning and its place through edits.</li><li><strong>Fit:</strong> maintained guides; a simple prompt suffices for a sentence.</li><li><strong>Need:</strong> an AI chat, shareable source text and somewhere to save its answer. No installation.</li></ul>\n<figure id=\"quickstart-graphic\"><pre>Sources + reader's goal\n↓ Shared facts and decisions ↓\nQuickstart: act · Presentation: understand\n↓ Revisions preserve both ↓</pre><figcaption>One factual basis, different reader needs.</figcaption></figure>\n<p class=\"action\" id=\"quickstart-action\">Next: <a href=\"#start\">open the starter task</a>, supply METHOD.md and example.md, then paste the request into your AI chat.</p>\n<p>Expect a guide with clear action, success signs and an honest preservation check—not proof of reader success.</p></section>\n<section id=\"presentation\"><h2>Keep the explanation when the wording changes</h2>\n<p id=\"presentation-benefit\">A shorter guide can lose its purpose or hide a prerequisite. This method ties writing to sources and checks that agreed meaning keeps its importance and place.</p>\n<figure id=\"presentation-graphic\"><pre>Sources → agreed decisions\n↙                         ↘\nAct: Quickstart     Understand: Presentation\n↘   review changes against decisions   ↙</pre><figcaption>Both paths share facts; a focused how-to can use one.</figcaption></figure>\n<p class=\"action\" id=\"presentation-action\"><a href=\"#quickstart\">Start with a small task</a> or <a href=\"METHOD.md\">read the method</a>.</p>\n<p>A detailed ordinary prompt can do this too. Reusing the instructions and keeping a short decision baseline makes the editorial discipline explicit; no measured savings or unique model capability is claimed.</p>\n<p>The <a href=\"example.md\">new illustrative example</a> shows source facts, a weak draft, a revision and a check. It is not a historical case or a newcomer study. The result still needs checking in its actual destination.</p></section>\n<section id=\"start\"><h2>Try it in your AI chat</h2>\n<p>Open <a href=\"METHOD.md\">METHOD.md</a> and <a href=\"example.md\">example.md</a>. Attach them to a new chat, or paste their text with filename labels, then send this request. No installation or special command is needed. Use only material you are authorized to share.</p>\n<blockquote>Apply METHOD.md to the Source facts, assignment and Before text in example.md. Produce a clearer English how-to and a concise decision-preservation check. Use only those facts; ignore the provided After and review until you have drafted your answer. Do not publish or modify files. Distinguish checks you actually performed from checks still needed.</blockquote>\n<p>Expect prerequisites, an exact action, success signs, recovery and a source-based preservation check. Compare meaning with the labelled After, not identical wording. If the tool cannot read attachments, paste the text. If it cannot execute the command, leave that check open rather than inventing a result.</p>\n<p>Markdown files may open as plain text or download in your browser; use a text editor or your tool's file attachment control. <a href=\"#quickstart\">Return to Quickstart</a>. More guidance: <a href=\"README.md\">README</a>.</p></section>\n<footer><a href=\"REFERENCE.md\">Method reference</a> · <a href=\"PROVENANCE.md\">Provenance and rights</a><p>Offline-readable local review candidate. No publication or independent release is implied.</p></footer>\n</main></body></html>",
+          "source_sha256": "630951b2bedffb5bcbdfed5eb9662ad45df537cbe169ea8151f5ef3228efb15a",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        },
+        {
+          "id": "documentation-guide/PROVENANCE.md:text:1-31",
+          "stage_id": "entry",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/PROVENANCE.md:1-31 (not a function)",
+          "file": "documentation-guide/PROVENANCE.md",
+          "line": 1,
+          "end_line": 31,
+          "code": "# Provenance and rights\n\n## Source boundary\n\nThis local export derives its method from the **generic Documentation Guide** source package, specifically its `SKILL.md` instructions and `DESIGN.md` design/decision explanations. Its `AGENTS.md`, `START-HERE.html` and optional `agents/openai.yaml` were inspected to understand packaging and dependencies. They were not copied into this export. The HTML entry here is newly written.\n\nA separately installed personal adaptation and its `references/design.md` were read to identify the adaptation boundary. Personal audience assumptions, accounts, delivery integrations, private prompts, project examples, historical feedback and private workspace references are not exported. Another project's license does not supply rights to this package.\n\nNo private document, historical trial artifact, original review or adaptation ledger is included. The example is newly created and labelled as such. Only generic method instructions/design rationale were selected and rewritten; this is not a recursive directory copy. Original source files remain read-only.\n\n## Rights status — MIT authorized for this export\n\nNo standalone LICENSE, LICENCE, COPYRIGHT or NOTICE file was found in the inspected generic source directory, its immediate enclosing skills directory, the next enclosing source directory, or the installed adaptation directory. The inspected original content did not supply an explicit license grant. This bounded check does not establish ownership or rule out agreements elsewhere.\n\nRoland Chotika explicitly authorized the MIT license for this export; see LICENSE. This is a specific decision for Documentation Guide, not an inferred license from another project. It grants the rights the licensor can grant; third-party rights and required notices remain unaffected.\n\nThe license and publication decisions were separate: publication of these sanitized contents as part of the combined collection was explicitly authorized. No employer ownership or export ban is inferred from a source folder name.\n\n## Source fingerprints\n\nSHA-256 fingerprints identify inspected versions without exposing private source locations. They are provenance identifiers, not evidence of legal permission.\n\n| Generic source file | SHA-256 |\n| --- | --- |\n| SKILL.md | `ba6bce6dae0e2f5032a95ba37fd53942e3446fa3da4b9097b0020605dcd40370` |\n| DESIGN.md | `71fb19ae45b5a137408736d4d653bc8b30157df0de889f21791c91dc2cd9bcc5` |\n| AGENTS.md | `1b841ee08a9ea8339e0907d4bea9d4f64003abb17a03688f136e1c1b33b777c3` |\n| START-HERE.html | `d0043cb0cd5457510cf20cd58df5f58aa4d44d7815726ea0f86abb710db2d91a` |\n| agents/openai.yaml | `5af2f1ece4b46e4b0f80631e084ef3da36ceb74db10447c8433d2918c2ae715b` |\n\nThese source filenames describe provenance only; they are not unresolved runtime links. The complete runtime reading dependencies are local: [README.md](README.md), [METHOD.md](METHOD.md), [REFERENCE.md](REFERENCE.md), [example.md](example.md) and [START-HERE.html](START-HERE.html). Internal review records are not part of this package. No original design, hidden prompt or external account is needed to apply the method.",
+          "source_sha256": "1d4745e8eb46855a9d26a9a90b0d6f666c50d28cc5d0e98600c8d78b8a462b4f",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        },
+        {
+          "id": "documentation-guide/LICENSE:text:1-21",
+          "stage_id": "entry",
+          "name": "Text authority",
+          "signature": "Text authority: documentation-guide/LICENSE:1-21 (not a function)",
+          "file": "documentation-guide/LICENSE",
+          "line": 1,
+          "end_line": 21,
+          "code": "MIT License\n\nCopyright (c) 2026 Roland Chotika\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.",
+          "source_sha256": "5b4841ac7396cd5a7dbeb10f716f0b771744e644c1af8bc0773a76dc23c5054a",
+          "callers": [],
+          "callees": [],
+          "branches": [],
+          "side_effects": [],
+          "cleanup_status": "NOT_EXECUTED_HERE",
+          "evidence_note": "Verbatim text authority from the clean target commit; not executable Python and not a run record. Historical claims in this text are attributed to the source, not re-executed here.",
+          "provenance": "SOURCE_EXTRACTION",
+          "execution_status": "NOT_EXECUTED_HERE",
+          "source_binding": "BOUND",
+          "artifact_binding": "UNKNOWN"
+        }
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    }
+  ],
+  "atlas": {
+    "view_box": "0 0 1080 400",
+    "nodes": [
+      {
+        "id": "assignment",
+        "stage_id": "assignment",
+        "title": "Establish the assignment",
+        "x": 20,
+        "y": 20,
+        "context": {
+          "purpose": "Read sources, draft and prior decisions; establish reader, starting state, outcome, language and destination. Explain supported value against a fair alternative.",
+          "handoff": "Resolve material gaps within permission; maintain one existing baseline.",
+          "artifact": "Source-bound assignment",
+          "values": [
+            "documentation-guide/METHOD.md:5-13"
+          ]
+        }
+      },
+      {
+        "id": "paths",
+        "stage_id": "paths",
+        "title": "Choose reader paths",
+        "x": 370,
+        "y": 20,
+        "context": {
+          "purpose": "Quickstart supports action; Presentation explains why. Use both only when both reader needs exist. Introductory entries require useful graphic, plain language and direction.",
+          "handoff": "Obtain feedback for substantial unapproved redesign before expanding.",
+          "artifact": "Chosen paths and destination requirements",
+          "values": [
+            "documentation-guide/METHOD.md:15-28"
+          ]
+        }
+      },
+      {
+        "id": "revise",
+        "stage_id": "revise",
+        "title": "Develop and preserve meaning",
+        "x": 720,
+        "y": 20,
+        "context": {
+          "purpose": "Put prerequisites before actions; connect action with result and recovery. Preserve decision meaning, prominence and location—not just keywords.",
+          "handoff": "Record dispositions in existing baseline and check unaffected material.",
+          "artifact": "Revised document with preserved decisions",
+          "values": [
+            "documentation-guide/METHOD.md:30-36",
+            "documentation-guide/REFERENCE.md:7-21"
+          ]
+        }
+      },
+      {
+        "id": "check",
+        "stage_id": "check",
+        "title": "Check and deliver honestly",
+        "x": 20,
+        "y": 200,
+        "context": {
+          "purpose": "Inspect destination and follow actionable steps where possible. Local checks do not prove reader success or publication.",
+          "handoff": "Deliver artifact plus actual checks and open points; publication needs authorization.",
+          "artifact": "Document and honest handover",
+          "values": [
+            "documentation-guide/METHOD.md:38-42"
+          ]
+        }
+      },
+      {
+        "id": "example",
+        "stage_id": "example",
+        "title": "Inspect the labelled teaching example",
+        "x": 370,
+        "y": 200,
+        "context": {
+          "purpose": "Source facts, weak Before, After and preservation table demonstrate source-first repair. It is a newly constructed exercise, not a historical case.",
+          "handoff": "Compare meanings and position, not identical wording; keep command-check claims attributed.",
+          "artifact": "Illustrative line-counting how-to, not an observed run here",
+          "values": [
+            "documentation-guide/example.md:3-15,43-57"
+          ]
+        }
+      },
+      {
+        "id": "entry",
+        "stage_id": "entry",
+        "title": "Use the existing entry and rights boundary",
+        "x": 720,
+        "y": 200,
+        "context": {
+          "purpose": "README and START-HERE already provide purpose, fit, starter request, expected outcome and recovery. Keep them as canonical user entry.",
+          "handoff": "Attach METHOD and example to an authorized AI chat, or apply to own sources. No special installation.",
+          "artifact": "Existing reader paths, provenance and license",
+          "values": [
+            "documentation-guide/README.md:7-33",
+            "documentation-guide/START-HERE.html:9-30"
+          ]
+        }
+      }
+    ],
+    "edges": [
+      {
+        "from": "entry",
+        "to": "assignment",
+        "kind": "HUMAN_DECISION",
+        "label": "Reader supplies authorized sources and assignment"
+      },
+      {
+        "from": "assignment",
+        "to": "paths",
+        "kind": "CONTRACT_ONLY",
+        "label": "Source-grounded editorial sequence, not a Python call"
+      },
+      {
+        "from": "paths",
+        "to": "revise",
+        "kind": "HUMAN_DECISION",
+        "label": "Choose paths and approve substantial redesign"
+      },
+      {
+        "from": "revise",
+        "to": "check",
+        "kind": "CONTRACT_ONLY",
+        "label": "Verify preservation and reader journey"
+      },
+      {
+        "from": "check",
+        "to": "revise",
+        "kind": "HUMAN_DECISION",
+        "label": "Repair discovered loss before delivery"
+      },
+      {
+        "from": "entry",
+        "to": "example",
+        "kind": "CONTRACT_ONLY",
+        "label": "Optional supplied teaching exercise"
+      },
+      {
+        "from": "example",
+        "to": "assignment",
+        "kind": "CONTRACT_ONLY",
+        "label": "Use supplied Source facts, not invented product context"
+      },
+      {
+        "from": "check",
+        "to": "entry",
+        "kind": "HUMAN_DECISION",
+        "label": "Authorized handover; publication is separate"
+      }
+    ]
+  },
+  "recommended_route": [
+    "entry",
+    "assignment",
+    "paths",
+    "revise",
+    "check",
+    "example"
+  ],
+  "orders": {
+    "dependency": [
+      "entry",
+      "assignment",
+      "paths",
+      "revise",
+      "check",
+      "example"
+    ],
+    "artifact_integrity": [
+      "entry",
+      "assignment",
+      "paths",
+      "revise",
+      "check",
+      "example"
+    ],
+    "editorial": [
+      "entry",
+      "assignment",
+      "paths",
+      "revise",
+      "check",
+      "example"
+    ],
+    "observed_chronology": []
+  },
+  "chronology": {
+    "status": "CAPTURE_GAP",
+    "explanation": "No target execution recorded. Reader/dependency orders are not an observed timeline."
+  },
+  "runtime_files": [],
+  "non_python_runtime": [
+    "documentation-guide/METHOD.md",
+    "documentation-guide/PROVENANCE.md",
+    "documentation-guide/README.md",
+    "documentation-guide/REFERENCE.md",
+    "documentation-guide/START-HERE.html",
+    "documentation-guide/example.md"
+  ],
+  "alternatives": [
+    {
+      "stage_id": "paths",
+      "title": "One focused path",
+      "condition": "A focused how-to or lookup has one reader need",
+      "consequence": "Do not force a duplicate Presentation; introductory requirements still apply when it is an entry.",
+      "source_ref": "documentation-guide/METHOD.md:17-24"
+    },
+    {
+      "stage_id": "assignment",
+      "title": "Ordinary prompt suffices",
+      "condition": "Only a sentence correction is needed",
+      "consequence": "Do not impose a full adoption guide or additional agent workflow.",
+      "source_ref": "documentation-guide/README.md:11,39"
+    }
+  ],
+  "evidence_gaps": [
+    "No target runtime, conversation, external service or publication verified.",
+    "Shared renderer labels source units as functions in some views; units explicitly labelled Text authority are documents, not Python functions.",
+    "Browser and reader acceptance are separate from manifest validation."
+  ],
+  "slices": [
+    {
+      "id": "preservation",
+      "parent_stage": "revise",
+      "title": "Preserve decisions, not words",
+      "question": "What must survive shortening the sample how-to?",
+      "input": "example.md source facts and After text, explicitly a constructed exercise.",
+      "decision": "Keep all-lines meaning, unchanged input, Python/UTF-8 prerequisites, small-file boundary and named error recovery in useful positions.",
+      "output": "A revised guide plus disposition/location/check record in the existing baseline.",
+      "consumer": "Reader acting on the how-to; maintainer applying the next revision.",
+      "evidence_limit": "Source-only editorial walkthrough. Historical local command checks are source claims; no LLM rewrite or newcomer study executed here.",
+      "source_refs": [
+        "documentation-guide/example.md:25-57",
+        "documentation-guide/METHOD.md:34"
+      ],
+      "provenance": "SOURCE_EXTRACTION",
+      "execution_status": "NOT_EXECUTED_HERE",
+      "source_binding": "BOUND",
+      "artifact_binding": "UNKNOWN"
+    }
+  ],
+  "required_slices": [
+    "preservation"
+  ],
+  "inventory": {
+    "tracked_files": [
+      {
+        "path": "documentation-guide/LICENSE",
+        "sha256": "5b4841ac7396cd5a7dbeb10f716f0b771744e644c1af8bc0773a76dc23c5054a",
+        "bytes": 1071,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/METHOD.md",
+        "sha256": "51b5615a1d5db4b11ad9e6e8f31adca24e77de4bcfd735ef8c41879d93cee4a3",
+        "bytes": 5585,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/PROVENANCE.md",
+        "sha256": "1d4745e8eb46855a9d26a9a90b0d6f666c50d28cc5d0e98600c8d78b8a462b4f",
+        "bytes": 3137,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/README.md",
+        "sha256": "1dd1bd924f52bb28a831ee9d476421c3ae37305587cc9c518f9b17d6ae03e74b",
+        "bytes": 4848,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/REFERENCE.md",
+        "sha256": "0ca4e451c3af6bc955f25bce1474f2b61870d4ab714407e1ce3127e3e2e625bf",
+        "bytes": 5556,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/START-HERE.html",
+        "sha256": "630951b2bedffb5bcbdfed5eb9662ad45df537cbe169ea8151f5ef3228efb15a",
+        "bytes": 4741,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      },
+      {
+        "path": "documentation-guide/example.md",
+        "sha256": "365f53f44248fee621f930e8528f43da5a823a06c8c1bf596a69130d3ec505cd",
+        "bytes": 5261,
+        "status": "INVENTORY_ONLY_NON_PYTHON"
+      }
+    ],
+    "excluded_source_units": [],
+    "scope_exclusions": [
+      "All repository paths outside documentation-guide/.",
+      "Private storage and historical runs are outside this sanitized export."
+    ],
+    "text_authority_policy": "Every non-Python tracked file embedded verbatim as text authority; METHOD split into contiguous sections. Test Python inventoried, not runtime."
+  }
+}

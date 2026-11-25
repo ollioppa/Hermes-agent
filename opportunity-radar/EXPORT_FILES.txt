@@ -1,6 +1,9 @@
 LICENSE
 AGENTS.md
 EXPORT_FILES.txt
+GUIDE.md
+walkthrough.html
+walkthrough.json
 PROVENANCE.md
 README.md
 config/screen_etfs.json

@@ -1,5 +1,7 @@
 # Decision Council
 
+[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+
 Created by Roland Chotika with AI assistance.
 
 Stress-test an uncertain design, plan or root-cause thesis. The method combines a shared evidence base with independent challenges and a saved verdict; it informs a decision without approving or executing changes.
@@ -36,7 +38,7 @@ Runtime instructions: `SKILL.md`, `kb/council_kb.md`, `references/execution-bind
 
 Runtime coordinator: `scripts/council_run.py`.
 
-Supporting material: `LICENSE`, `README.md`, `START-HERE.html`, `demo.html`, `tests/test_council_run.py`.
+Supporting material: `GUIDE.md`, `walkthrough.html`, `walkthrough.json`, `LICENSE`, `README.md`, `START-HERE.html`, `demo.html`, `tests/test_council_run.py`.
 
 Private original design/history and maintenance plans are deliberately excluded. Generic seed guidance and fictional examples remain. No personal runs, case facts, credentials or user KB are included. Existing `council_run.py`, `council/location.json`, `council_kb.md`, JSON fields, commands and generated state formats remain compatible technical identifiers.
 

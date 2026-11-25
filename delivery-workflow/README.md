@@ -1,5 +1,7 @@
 # Delivery Workflow
 
+[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+
 Created by Roland Chotika with AI assistance.
 
 A host-agent workflow for delivering working software and substantial changes with saved evidence. The existing Python coordinator manages records, not inference, deployment or autonomous agents. Small known edits normally do not need it.
