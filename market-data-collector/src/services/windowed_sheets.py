@@ -101,8 +101,7 @@ def write_windowed_db_sheets(
         windowed_rows = [header] + windowed_data
 
         logger.info(
-            f"Writing {len(windowed_data)} rows to {window_key} DB sheet "
-            f"(spreadsheet_id={spreadsheet_id[:20]}...)"
+            f"Writing {len(windowed_data)} rows to {window_key} DB sheet"
         )
 
         if not dry_run:
@@ -156,8 +155,7 @@ def write_windowed_market_data_sheets(
         windowed_rows = [header] + windowed_data
 
         logger.info(
-            f"Writing {len(windowed_data)} rows to {window_key} MARKET_DATA sheet "
-            f"(spreadsheet_id={spreadsheet_id[:20]}...)"
+            f"Writing {len(windowed_data)} rows to {window_key} MARKET_DATA sheet"
         )
 
         if not dry_run:

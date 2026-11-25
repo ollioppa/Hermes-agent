@@ -84,7 +84,7 @@ def get_sheet_by_id(spreadsheet_id: str, sheet_name: str) -> gspread.Worksheet:
         return spreadsheet.worksheet(sheet_name)
     except gspread.exceptions.WorksheetNotFound:
         # Create if not found
-        logger.info(f"Creating worksheet '{sheet_name}' in spreadsheet {spreadsheet_id[:20]}...")
+        logger.info(f"Creating worksheet '{sheet_name}' in configured spreadsheet")
         worksheet = spreadsheet.add_worksheet(title=sheet_name, rows=100, cols=50)
         return worksheet
 
