@@ -8,6 +8,18 @@ from opportunity_radar.models import MarketSnapshot
 from opportunity_radar.transitions import ContractError
 
 
+@pytest.mark.parametrize("stamp", ["2026-10-24T08:07:33Z", "2026-10-24T08:07:33+00:00", "2026-10-24T10:07:33+02:00"])
+def test_snapshot_accepts_aware_timestamps_without_rewriting_input(stamp):
+    item = MarketSnapshot("TEST", "case", 1.0, "2026-10-24", stamp, "USD", "fixture", "price")
+    assert item.retrieved_at == stamp
+
+
+@pytest.mark.parametrize("stamp", ["2026-10-24T08:07:33", "2026-10-24", "not-a-date", "2026-10-24Z08:07:33", None, 123])
+def test_snapshot_rejects_missing_timezone_or_invalid_timestamp(stamp):
+    with pytest.raises(ContractError, match="timezone-aware"):
+        MarketSnapshot("TEST", "case", 1.0, "2026-10-24", stamp, "USD", "fixture", "price")
+
+
 STOCK_REVIEW = {
     "evidence_as_of": "2026-07-16",
     "motor": "operative normalization",

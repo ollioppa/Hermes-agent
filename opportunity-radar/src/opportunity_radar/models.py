@@ -27,7 +27,11 @@ class MarketSnapshot:
         except (TypeError, ValueError, OverflowError) as error:
             raise ContractError("snapshot requires a positive finite price and YYYY-MM-DD date") from error
         try:
-            retrieved = datetime.fromisoformat(self.retrieved_at)
+            # Python 3.9 needs an explicit UTC offset.
+            stamp = self.retrieved_at
+            if isinstance(stamp, str) and stamp.endswith('Z'):
+                stamp = stamp[:-1] + '+00:00'
+            retrieved = datetime.fromisoformat(stamp)
             if retrieved.utcoffset() is None:
                 raise ValueError('timezone required')
         except (TypeError, ValueError, OverflowError) as error:
