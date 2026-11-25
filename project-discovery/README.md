@@ -1,6 +1,8 @@
 # Project Discovery
 
-[User guide](GUIDE.md) · [Technical walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+**Start here: [User guide](GUIDE.md).** Purpose, first steps and expected results.
+
+For technical depth: [open the walkthrough](https://ollioppa.github.io/Hermes-agent/project-discovery/walkthrough.html). Its [source manifest](walkthrough.json) is for inspection, not required reading.
 
 Created by Roland Chotika with AI assistance.
 

@@ -1,6 +1,8 @@
 # Documentation Guide
 
-[Method walkthrough](walkthrough.html) · [Source manifest](walkthrough.json)
+**Start here: [worked example](example.md), then [Quickstart](#quickstart).**
+
+For method details: [open the walkthrough](https://ollioppa.github.io/Hermes-agent/documentation-guide/walkthrough.html). Its [source manifest](walkthrough.json) is for inspection, not required reading.
 
 Created by Roland Chotika with AI assistance.
 
